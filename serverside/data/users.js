@@ -1,58 +1,7 @@
 // data is taken from https://randomuser.me/api/
 module.exports = [
     {
-        "gender": "male",
-        "name": {
-            "title": "mr",
-            "first": "brad",
-            "last": "gibson"
-        },
-        "location": {
-            "street": "9278 new road",
-            "city": "kilcoole",
-            "state": "waterford",
-            "postcode": "93027",
-            "coordinates": {
-                "latitude": "20.9267",
-                "longitude": "-7.9310"
-            },
-            "timezone": {
-                "offset": "-3:30",
-                "description": "Newfoundland"
-            }
-        },
-        "email": "brad.gibson@example.com",
-        "login": {
-            "uuid": "155e77ee-ba6d-486f-95ce-0e0c0fb4b919",
-            "username": "silverswan131",
-            "password": "firewall",
-            "salt": "TQA1Gz7x",
-            "md5": "dc523cb313b63dfe5be2140b0c05b3bc",
-            "sha1": "7a4aa07d1bedcc6bcf4b7f8856643492c191540d",
-            "sha256": "74364e96174afa7d17ee52dd2c9c7a4651fe1254f471a78bda0190135dcd3480"
-        },
-        "dob": {
-            "date": "1993-07-20T09:44:18.674Z",
-            "age": 26
-        },
-        "registered": {
-            "date": "2002-05-21T10:59:49.966Z",
-            "age": 17
-        },
-        "phone": "011-962-7516",
-        "cell": "081-454-0666",
-        "id": {
-            "name": "PPS",
-            "value": "0390511T"
-        },
-        "picture": {
-            "large": "https://randomuser.me/api/portraits/men/75.jpg",
-            "medium": "https://randomuser.me/api/portraits/med/men/75.jpg",
-            "thumbnail": "https://randomuser.me/api/portraits/thumb/men/75.jpg"
-        },
-        "nat": "IE"
-    },
-    { 
+        "id": "1",
         "gender": "male", 
         "name": { 
             "title": "Mr", 
@@ -96,10 +45,6 @@ module.exports = [
         }, 
         "phone": "(957)-641-5543", 
         "cell": "(248)-637-1306", 
-        "id": { 
-            "name": "SSN", 
-            "value": "338-96-7137" 
-        }, 
         "picture": { 
             "large": "https://randomuser.me/api/portraits/men/24.jpg", 
             "medium": "https://randomuser.me/api/portraits/med/men/24.jpg", 
@@ -108,6 +53,7 @@ module.exports = [
         "nat": "IE"
     },
     {
+        "id": "2",
         "gender": "female",
         "name": {
             "title": "Miss",
@@ -152,10 +98,6 @@ module.exports = [
         },
         "phone": "66903364",
         "cell": "42717003",
-        "id": {
-            "name": "FN",
-            "value": "11067027061"
-        },
         "picture": {
             "large": "https://randomuser.me/api/portraits/women/71.jpg",
             "medium": "https://randomuser.me/api/portraits/med/women/71.jpg",
@@ -164,6 +106,7 @@ module.exports = [
         "nat": "NO"
     },
     {
+        "id": "3",
         "gender": "female",
         "name": {
             "title": "Ms",
@@ -208,10 +151,6 @@ module.exports = [
         },
         "phone": "37777196",
         "cell": "48388938",
-        "id": {
-            "name": "FN",
-            "value": "03104647609"
-        },
         "picture": {
             "large": "https://randomuser.me/api/portraits/women/24.jpg",
             "medium": "https://randomuser.me/api/portraits/med/women/24.jpg",
@@ -220,6 +159,7 @@ module.exports = [
         "nat": "NO"
     },
     {
+        "id": "4",
         "gender": "male",
         "name": {
             "title": "Mr",
@@ -264,10 +204,6 @@ module.exports = [
         },
         "phone": "089-40867810",
         "cell": "0993-775-9615",
-        "id": {
-            "name": "",
-            "value": null
-        },
         "picture": {
             "large": "https://randomuser.me/api/portraits/men/81.jpg",
             "medium": "https://randomuser.me/api/portraits/med/men/81.jpg",
@@ -276,6 +212,7 @@ module.exports = [
         "nat": "IR"
     },
     {
+        "id": "5",
         "gender": "male",
         "name": {
             "title": "Monsieur",
@@ -320,10 +257,6 @@ module.exports = [
         },
         "phone": "078 216 76 73",
         "cell": "076 785 33 70",
-        "id": {
-            "name": "AVS",
-            "value": "756.3204.8994.92"
-        },
         "picture": {
             "large": "https://randomuser.me/api/portraits/men/45.jpg",
             "medium": "https://randomuser.me/api/portraits/med/men/45.jpg",
@@ -332,6 +265,7 @@ module.exports = [
         "nat": "CH"
     },
     {
+        "id": "6",
         "gender": "female",
         "name": {
             "title": "Miss",
@@ -376,10 +310,6 @@ module.exports = [
         },
         "phone": "02-94-73-58-80",
         "cell": "06-48-70-57-47",
-        "id": {
-            "name": "INSEE",
-            "value": "2NNaN05699044 34"
-        },
         "picture": {
             "large": "https://randomuser.me/api/portraits/women/48.jpg",
             "medium": "https://randomuser.me/api/portraits/med/women/48.jpg",
