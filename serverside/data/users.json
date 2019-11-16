@@ -1,5 +1,4 @@
-// data is taken from https://randomuser.me/api/
-module.exports = [
+[
     {
         "id": "1",
         "gender": "male", 
