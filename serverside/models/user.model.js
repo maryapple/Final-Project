@@ -1,6 +1,6 @@
 const filename = '../data/users.json'
 let users = require(filename)
-const helper = require('../helpers/helper-user.js')
+const helper = require('../checks/checks-for-models')
 
 // GET all users
 function getUsers() {
