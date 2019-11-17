@@ -34,9 +34,10 @@ function deleteUser(id) {
     return new Promise((resolve, reject) => {
         helper.mustBeInArray(users, id)
             .then( () => {
+                // добавить новую переменную
                 users = users.filter(u => u.id !== id)
                 helper.writeJSONFile(configPath, users)
-                resolve()  
+                resolve()
             })
             .catch(err => reject(err))
     })
@@ -49,6 +50,7 @@ function createUser(newUser) {
         const name = {name: helper.generateName() }
         const email = { email: helper.generateEmail() }
         newUser = { ...id, ...name, ...email }
+        
         users.push(newUser)
         helper.writeJSONFile(configPath, users)
         resolve(newUser)
