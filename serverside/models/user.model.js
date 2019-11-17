@@ -1,4 +1,6 @@
 const filename = '../data/users.json'
+const path = require('path')
+const configPath = path.join(__dirname, filename)
 let users = require(filename)
 const helper = require('../checks/checks-for-models')
 
@@ -33,7 +35,7 @@ function deleteUser(id) {
         helper.mustBeInArray(users, id)
             .then( () => {
                 users = users.filter(u => u.id !== id)
-                helper.writeJSONFile(filename, users)
+                helper.writeJSONFile(configPath, users)
                 resolve()  
             })
             .catch(err => reject(err))
@@ -48,7 +50,7 @@ function createUser(newUser) {
         const email = { email: helper.generateEmail() }
         newUser = { ...id, ...name, ...email }
         users.push(newUser)
-        helper.writeJSONFile(filename, users)
+        helper.writeJSONFile(configPath, users)
         resolve(newUser)
     })
 }
@@ -67,7 +69,7 @@ function updateUser(id, newUser) {
                     email: helper.generateEmail()
                 }
                 users[index] = { ...id, ...name, ...email, ...newUser }
-                helper.writeJSONFile(filename, users)
+                helper.writeJSONFile(configPath, users)
                 resolve(users[index])
             })
             .catch(err => reject(err))
