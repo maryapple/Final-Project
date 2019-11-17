@@ -48,8 +48,8 @@ function createUser(newUser) {
     return new Promise((resolve, reject) => {
         const id = { id: helper.getNewId(users) }
         const name = {name: helper.generateName() }
-        const email = { email: helper.generateEmail() }
-        newUser = { ...id, ...name, ...email }
+        const email = { email: helper.generateEmail(users) }
+        newUser = { ...id, ...name, ...email, ...newUser }
         
         users.push(newUser)
         helper.writeJSONFile(configPath, users)

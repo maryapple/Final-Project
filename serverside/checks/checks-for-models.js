@@ -6,7 +6,7 @@ const fs = require('fs')
 function mustBeInArray(array, id) {
     console.log('checks-for-models.js')
     return new Promise((resolve, reject) => {
-        const row = array.find(r => r.id == id)
+        const row = array.find(r => r.id === id)
 /*         console.log('ROW \n', row, '\n')
         console.log(array) 
         здесь все ок
@@ -25,7 +25,7 @@ function mustBeInArray(array, id) {
 // functions for creating new user
 const getNewId = (array) => {
     if (array.length > 0) {
-        return array[array.length - 1].id + 1
+        return parseInt(array[array.length - 1].id) + parseInt(1)
     } else {
         return 1
     }
