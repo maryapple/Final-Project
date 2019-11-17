@@ -1,18 +1,10 @@
-// functions for models
+// functions for MODELS
 
-const fs = require('fs')
+// const fs = require('fs')
 
-// searching in the array the last id and increments of 1 to return a new id
-const getNewId = (array) => {
-    if (array.length > 0) {
-        return array[array.length - 1].id + 1
-    } else {
-        return 1
-    }
-}
-
-// returns a promise. Using when we need to check if a row exist via the id (Read One, Update and Delete)
+// check if a row (person in array) exists via the id (GET one, UPDATE, DELETE)
 function mustBeInArray(array, id) {
+    console.log('helper-user.js')
     return new Promise((resolve, reject) => {
         const row = array.find(r => r.id == id)
         if (!row) {
@@ -26,6 +18,5 @@ function mustBeInArray(array, id) {
 }
 
 module.exports = {
-    getNewId,
     mustBeInArray
 }
