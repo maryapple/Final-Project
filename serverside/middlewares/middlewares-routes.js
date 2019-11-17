@@ -12,6 +12,17 @@ function mustBeInteger(req, res, next) {
     }
 }
 
+function checkFieldsUser(req, res, next) {
+    const { id, name, email } = req.body
+    if (id && name && email) {
+        next()
+    } 
+    else {
+        res.status(400).json({ message: 'fields are not good' })
+    }
+}
+
 module.exports = {
-    mustBeInteger
+    mustBeInteger,
+    checkFieldsUser
 }

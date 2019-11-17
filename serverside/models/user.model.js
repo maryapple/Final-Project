@@ -41,8 +41,44 @@ function deleteUser(id) {
     })
 }
 
+// CREATE
+function createUser(newUser) {
+    return new Promise((resolve, reject) => {
+        const id = { id: helper.getNewId(users) }
+        const name = {name: helper.generateName() }
+        const email = { email: helper.generateEmail() }
+        newUser = { ...id, ...name, ...email }
+        users.push(newUser)
+        helper.writeJSONFile(filename, users)
+        resolve(newUser)
+    })
+}
+
+// UPDATE
+function updateUser(id, newUser) {
+    return new Promise((resolve, reject) => {
+        helper.mustBeInArray(users, id)
+            .then(user => {
+                const index = users.findIndex(p => p.id == user.id)
+                id = { id: user.id }
+                const name = {
+                    name: helper.generateName()
+                }
+                const email = {
+                    email: helper.generateEmail()
+                }
+                users[index] = { ...id, ...name, ...email, ...newUser }
+                helper.writeJSONFile(filename, users)
+                resolve(users[index])
+            })
+            .catch(err => reject(err))
+    })
+}
+
 module.exports = {
     getUsers,
     getUser,
-    deleteUser
+    deleteUser,
+    createUser,
+    updateUser
 }

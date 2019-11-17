@@ -49,3 +49,27 @@ router.delete('/:id', m.mustBeInteger, async (req, res) => {
             res.status(500).json({ message: err.message })
         })
 })
+
+router.post('/', m.checkFieldsUser, async (req, res) => {
+    await user.createUser(req.body)
+        .then(user => res.status(201).json({
+            message: `The user #${user.id} has been created`,
+            content: user
+        }))
+        .catch(err => res.status(500).json({ message: err.message }))
+})
+
+router.put('/:id', m.mustBeInteger, m.checkFieldsUser, async (req, res) => {
+    const id = req.params.id
+    await user.updateUser(id, req.body)
+        .then(user => res.json({
+            message: `The user #${id} has been updated`,
+            content: user
+        }))
+        .catch(err => {
+            if (err.status) {
+                res.status(err.status).json({ message: err.message })
+            }
+            res.status(500).json({ message: err.message })
+        })
+})
