@@ -325,5 +325,58 @@
             "last": "Garcia"
         },
         "email": "random6@gmail.com"
+    },
+    {
+        "id": "7",
+        "name": {
+            "title": "Mr",
+            "first": "Nick",
+            "last": "Jonas"
+        },
+        "email": "karl.lewis@example.com",
+        "gender": "male",
+        "location": {
+            "street": {
+                "number": 9872,
+                "name": "Preston Rd"
+            },
+            "city": "Mesquite",
+            "state": "Pennsylvania",
+            "country": "United States",
+            "postcode": 98641,
+            "coordinates": {
+                "latitude": "87.2979",
+                "longitude": "-175.9329"
+            },
+            "timezone": {
+                "offset": "-3:30",
+                "description": "Newfoundland"
+            }
+        },
+        "login": {
+            "uuid": "985fa8bf-1e89-436b-a5a1-0953f8ba7298",
+            "username": "purplebutterfly141",
+            "password": "fallon",
+            "salt": "f4IJmzSl",
+            "md5": "c45eb54f6da9c9a1de60d49ac0a998a3",
+            "sha1": "95393df955ae56190ef268d6be6e9d04afab44dd",
+            "sha256": "08a1f1a54042527db6884477973ed6c8f7e3b526de73b5f0a54d1c8428ee375d"
+        },
+        "dob": {
+            "date": "1975-02-07T10:30:40.113Z",
+            "age": 44
+        },
+        "registered": {
+            "date": "2008-06-24T12:34:51.325Z",
+            "age": 11
+        },
+        "phone": "(957)-641-5543",
+        "cell": "(248)-637-1306",
+        "picture": {
+            "large": "https://randomuser.me/api/portraits/men/24.jpg",
+            "medium": "https://randomuser.me/api/portraits/med/men/24.jpg",
+            "thumbnail": "https://randomuser.me/api/portraits/thumb/men/24.jpg"
+        },
+        "nat": "IE"
     }
 ]
