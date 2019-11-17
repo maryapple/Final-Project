@@ -32,7 +32,6 @@ function deleteUser(id) {
     return new Promise((resolve, reject) => {
         helper.mustBeInArray(users, id)
             .then( () => {
-                // user => resolve(user)
                 users = users.filter(u => u.id !== id)
                 helper.writeJSONFile(filename, users)
                 resolve()  

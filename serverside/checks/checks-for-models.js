@@ -7,6 +7,11 @@ function mustBeInArray(array, id) {
     console.log('checks-for-models.js')
     return new Promise((resolve, reject) => {
         const row = array.find(r => r.id == id)
+/*         console.log('ROW \n', row, '\n')
+        console.log(array) 
+        здесь все ок
+        */
+        
         if (!row) {
             reject({
                 message: 'ID is not good',
@@ -58,6 +63,7 @@ function generateEmail(array) {
 
 function writeJSONFile(filename, content) {
     fs.writeFileSync(filename, JSON.stringify(content), 'utf8', (err) => {
+        // console.log(content)
         if (err) {
             console.log(err)
         }
