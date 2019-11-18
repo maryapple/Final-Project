@@ -1,0 +1,19 @@
+{
+    "extends": "react-app",
+    "rules": {
+        "indent": [
+            "warn",
+            4
+        ]
+    },
+    "overrides": [
+        {
+            "files": [
+                "**/*.spec.js"
+            ],
+            "rules": {
+                "no-undef": "off"
+            }
+        }
+    ]
+}
