@@ -17,7 +17,7 @@ function mustBeInArray(array, id) {
     })
 }
 
-// functions for creating new user
+// for CREATE
 const getNewId = (array) => {
     if (array.length > 0) {
         return parseInt(array[array.length - 1].id) + parseInt(1)
@@ -26,6 +26,7 @@ const getNewId = (array) => {
     }
 }
 
+// for CREATE
 function generateName() {
     const firstName = ['Maria', 'Anna', 'Christina', 'Vi', 'Nana', 'Victor', 'Nick', 'Artem', 'Alex', 'Max']
     const secondName = ['Banks', 'Lee', 'Ash', 'Wilson', 'Davis', 'Martin', 'Garcia', 'Moore', 'Clark', 'Hill']
@@ -50,6 +51,7 @@ function generateName() {
     return obj
 }
 
+// for CREATE
 function generateEmail(array) {
     const randNum = Math.floor(Math.random() * 10)
     const words = ['example', 'admin', 'default', 'test', 'check', 'myemail', 'template', 'random', 'abc', 'def']

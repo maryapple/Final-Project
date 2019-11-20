@@ -1,6 +1,6 @@
 // Middlewares for routes
 
-// checks before to continue if the id is an integer. Using when we need to get the id (Get One, Update and Delete)
+// if the id is an integer, for  GET UPDATE DELETE
 function mustBeInteger(req, res, next) {
     const id = req.params.id
     console.log('middwrs-routes.js')
@@ -12,6 +12,7 @@ function mustBeInteger(req, res, next) {
     }
 }
 
+// for POST, UPDATE
 function checkFieldsUser(req, res, next) {
     const { id, name, email } = req.body
     console.log(req.body)
