@@ -1,6 +1,17 @@
 .panel-container {
+    /* width: 80%; */
     display: flex;
-    background: green;
-    flex-grow: 1;
-    height: 3rem;
+    /* background: rgb(29, 29, 31); */
+    margin: 3rem auto 0 auto;
+    /* flex-grow: 1; */
+    height: 30%;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+button {
+    font-size: 2rem !important;
+    width: 30%;
+    margin: .5%;
+    height: 6rem;
 }

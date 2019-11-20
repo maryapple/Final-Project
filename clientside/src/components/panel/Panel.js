@@ -4,11 +4,12 @@ import './Panel.css'
 const Panel = () => {
     return (
         <div className="panel-container">
-            <div className="btn-group" role="group" id="panel-group">
-                <button type="button" className="btn btn-secondary btn-lg">Left</button>
-                <button type="button" className="btn btn-secondary btn-lg">Middle</button>
-                <button type="button" className="btn btn-secondary btn-lg">Right</button>
-            </div >
+            <button type="button" className="btn btn-secondary">Баланс</button>
+            <button type="button" className="btn btn-secondary">Перевод</button>
+            <button type="button" className="btn btn-secondary">Оплата</button>
+            <button type="button" className="btn btn-secondary">Новая карта</button>
+            <button type="button" className="btn btn-secondary">Новый счет</button>
+            <button type="button" className="btn btn-secondary">Взять кредит</button>
         </div>
     )
 }
