@@ -63,10 +63,71 @@ ul ul a {
 
 .sidebar-container {
     display: flex;
-    width: 15%;
-    flex-grow: 1;
+    width: 10rem;
+    /* flex-grow: 1; */
+    background: rgb(29, 29, 31);
+    height: 50rem;
 }
 
 .sidebar {
-    background: crimson;
+    background: rgb(29, 29, 31);
+    width: 100%;
+}
+
+.sidebar-header {
+    text-align: center;
+    padding: 1.5rem 0;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    font-size: 1.5rem;
+    border-bottom: 1px solid black;
+}
+
+.sidebar ul {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sidebar ul li {
+    height: 6rem;
+    /* border: 1px solid white; */
+    display: flex;
+    list-style: none;
+    width: 100%;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.sidebar ul li:hover {
+    opacity: 0.8;
+    background: grey;
+}
+
+li .li-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 100%;
+    text-decoration: none;
+    color: white;
+    height: 3rem;
+    /* элементы внутри красного квадрата */
+    align-items: center; 
+    /* background: red; */
+}
+
+.li-text {
+    /* display: flex; */
+    font-size: 1.25rem;
+}
+
+li a{
+    align-items: center;
+    vertical-align: middle;
+}
+
+i {
+    color: white;
 }
