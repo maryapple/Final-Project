@@ -1,0 +1,6 @@
+.panel-container {
+    display: flex;
+    background: green;
+    flex-grow: 2;
+    height: 3rem;
+}

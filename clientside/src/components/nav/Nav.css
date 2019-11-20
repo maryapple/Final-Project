@@ -1,9 +1,4 @@
-/* .wrapper {
-    display: flex;
-    align-items: stretch;
-} */
-
-#sidebar {
+/* #sidebar {
     background: slategrey;
     min-width: 250px;
     max-width: 250px;
@@ -34,13 +29,10 @@ a, a:hover, a:focus {
 
 #sidebar ul.components {
     text-align: center;
-    /* padding: 20px 0; */
-    /* border-bottom: 1px solid #47748b; */
 }
 
 #sidebar ul p {
     color: #fff;
-    /* padding: 10px; */
 }
 
 .li-content {
@@ -66,4 +58,15 @@ ul ul a {
     font-size: 0.9em !important;
     padding-left: 30px !important;
     background: #6d7fcc;
+} */
+
+
+.sidebar-container {
+    display: flex;
+    width: 15%;
+    flex-grow: 1;
+}
+
+.sidebar {
+    background: crimson;
 }

@@ -57,7 +57,7 @@ function createUser(newUser) {
     })
 }
 
-// UPDATE
+/* // UPDATE
 function updateUser(id, newUser) {
     return new Promise((resolve, reject) => {
         helper.mustBeInArray(users, id)
@@ -76,12 +76,11 @@ function updateUser(id, newUser) {
             })
             .catch(err => reject(err))
     })
-}
+} */
 
 module.exports = {
     getUsers,
     getUser,
     deleteUser,
-    createUser,
-    updateUser
+    createUser
 }

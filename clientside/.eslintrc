@@ -3,7 +3,7 @@
     "rules": {
         "indent": [
             "warn",
-            "tab"
+            4
         ]
     },
     "overrides": [

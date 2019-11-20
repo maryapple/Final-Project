@@ -24,7 +24,9 @@ router.get('/:id', m.mustBeInteger, async (req, res) => {
     await user.getUser(id)
         .then(user => {
             console.log('user.routes.js get id')
+            // take user account
             res.json(user)
+            // makeObj(user)
         })
         .catch(err => {
             if (err.status) {
@@ -61,7 +63,7 @@ router.post('/', m.checkFieldsUser, async (req, res) => {
         .catch(err => res.status(500).json({ message: err.message }))
 })
 
-router.put('/:id', m.mustBeInteger, m.checkFieldsUser, async (req, res) => {
+/* router.put('/:id', m.mustBeInteger, m.checkFieldsUser, async (req, res) => {
     const id = req.params.id
     await user.updateUser(id, req.body)
         .then(user => res.json({
@@ -74,4 +76,4 @@ router.put('/:id', m.mustBeInteger, m.checkFieldsUser, async (req, res) => {
             }
             res.status(500).json({ message: err.message })
         })
-})
+}) */
