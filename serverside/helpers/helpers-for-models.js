@@ -1,5 +1,3 @@
-// functions for MODELS
-
 const fs = require('fs')
 
 // check if a row (person in array) exists via the id (GET one, UPDATE, DELETE)
@@ -26,7 +24,7 @@ const getNewId = (array) => {
     }
 }
 
-// for CREATE
+// for CREATE a user
 function generateName() {
     const firstName = ['Maria', 'Anna', 'Christina', 'Vi', 'Nana', 'Victor', 'Nick', 'Artem', 'Alex', 'Max']
     const secondName = ['Banks', 'Lee', 'Ash', 'Wilson', 'Davis', 'Martin', 'Garcia', 'Moore', 'Clark', 'Hill']
@@ -51,7 +49,7 @@ function generateName() {
     return obj
 }
 
-// for CREATE
+// for CREATE user
 function generateEmail(array) {
     const randNum = Math.floor(Math.random() * 10)
     const words = ['example', 'admin', 'default', 'test', 'check', 'myemail', 'template', 'random', 'abc', 'def']
@@ -60,11 +58,15 @@ function generateEmail(array) {
 
 function writeJSONFile(filename, content) {
     fs.writeFileSync(filename, JSON.stringify(content), 'utf8', (err) => {
-        // console.log(content)
         if (err) {
             console.log(err)
         }
     })
+}
+
+function randomNum(min, max) {
+    var rand = min - 0.5 + Math.random() * (max - min + 1)
+    return Math.round(rand)
 }
 
 module.exports = {
@@ -72,5 +74,6 @@ module.exports = {
     getNewId,
     generateName,
     generateEmail,
-    writeJSONFile
+    writeJSONFile,
+    randomNum
 }

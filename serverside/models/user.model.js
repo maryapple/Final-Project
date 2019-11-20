@@ -2,7 +2,7 @@ const filename = '../data/users.json'
 const path = require('path')
 const configPath = path.join(__dirname, filename)
 let users = require(filename)
-const helper = require('../checks/checks-for-models')
+const helper = require('../helpers/helpers-for-models')
 
 // GET all users
 function getUsers() {
