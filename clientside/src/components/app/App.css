@@ -11,3 +11,8 @@ html body {
     display: flex;
     flex-direction: row;
 }
+
+.main-page-container {
+    flex-direction: column;
+    width: 100%;
+}
