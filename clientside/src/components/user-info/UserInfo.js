@@ -5,8 +5,8 @@ const UserInfo = () => {
     return (
         <div className="user-info-container">
             <h1>Иванов Иван</h1>
-            <div className="account">Счет №111111</div>
-            <div className="cardField">Карта №1111111</div>
+            <div>Счет №111111</div>
+            <div>Карта №1111111</div>
         </div>
     )
 }
