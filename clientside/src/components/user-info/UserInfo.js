@@ -13,7 +13,7 @@ const UserInfo = (props) => {
     axios.get(`/api/users/${currentId}`)
         .then(res => {
             // res(data)
-            console.log(res)
+            console.log(res.data)
         })
         .catch((error) =>
             console.log(error)
