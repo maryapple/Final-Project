@@ -1,15 +1,24 @@
 import React from 'react'
 import './UserInfo.css'
+import axios from 'axios'
 
 const UserInfo = (props) => {
     // id юзера из заглушки
     const arr = props.data.map((elem) => {
         return elem
     })
-    const currentId = arr[0].id 
+    const currentId = arr[0].id
 
     // По id пользователя найти id карты и счета
-    
+    axios.get(`/api/users/${currentId}`)
+        .then(res => {
+            // res(data)
+            console.log(res)
+        })
+        .catch((error) =>
+            console.log(error)
+        )
+
     // Если карт или счетов несколько, вывести несколько (т.е. все) элементов
 
     return (
