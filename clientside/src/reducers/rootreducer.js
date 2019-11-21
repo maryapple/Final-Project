@@ -4,11 +4,11 @@ const GET_DATA_FAIL = 'GET_DATA_FAIL'
 
 const initialState = {
     data: [],
-    isLoading: false,
+    isLoading: true,
     error: ''
 }
 
-export const rootReducer = (state = initialState, action) => {
+const rootReducer = (state = initialState, action) => {
     switch (action.type) {
         case GET_DATA_REQUEST:
             return { ...state, isLoading: true }
@@ -23,3 +23,5 @@ export const rootReducer = (state = initialState, action) => {
             return state
     }
 }
+
+export default rootReducer

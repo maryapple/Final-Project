@@ -1,7 +1,7 @@
 import { createStore, applyMiddleware } from 'redux'
-import { rootReducer } from '../reducers/rootreducer'
+import data from '../reducers'
 import thunk from 'redux-thunk'
 
-const store = createStore(rootReducer, applyMiddleware(thunk))
+const store = createStore(data, applyMiddleware(thunk))
 
 export default store

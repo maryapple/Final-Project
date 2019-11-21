@@ -5,18 +5,17 @@ const GET_DATA_SUCCESS = 'GET_DATA_SUCCESS'
 const GET_DATA_FAIL = 'GET_DATA_FAIL'
 
 
-const getUserData = () => {
+const getUserData = (currentId) => {
     return dispatch => {
         dispatch({
             type: GET_DATA_REQUEST
         })
 
         axios.get(`/api/users/${currentId}`)
-            .then(res => res.json())
             .then(data => {
                 dispatch({
                     type: GET_DATA_SUCCESS,
-                    payload: data
+                    payload: data.data
                 })
             })
             .catch(error => {
@@ -28,4 +27,6 @@ const getUserData = () => {
     }
 }
 
-export default getUserData
+export {
+    getUserData
+}

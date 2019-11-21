@@ -1,42 +1,48 @@
 import React from 'react'
 import './UserInfo.css'
 import { connect } from 'react-redux'
+import { getUserData } from '../../actions/main-page-actions'
 
-const UserInfo = (props) => {
-    // id юзера из заглушки
-    const arr = props.data.map((elem) => {
-        return elem
-    })
-    const currentId = arr[0].id
+class UserInfo extends React.Component {
+    componentDidMount() {
+        this.props.setUserData(1)
+    }
 
-/*     // По id пользователя найти id карты и счета
-    axios.get(`/api/users/${currentId}`)
-        .then(res => {
-            // res(data)
-            console.log(res.data)
-        })
-        .catch((error) =>
-            console.log(error)
-        ) */
+    renderUser = () => {
+        return (
+            <div className="user-info-container">
+                <h1>{this.props.users.name}</h1>
+                <div>Счет №111111</div>
+                <div>Карта №1111111</div>
+            </div>
+        )
+    }
 
-    // Если карт или счетов несколько, вывести несколько (т.е. все) элементов
+    render() {
+        console.log(this.props.loading)
 
-    return (
-        <div className="user-info-container">
-            <h1>Иванов Иван {currentId}</h1>
-            <div>Счет №111111</div>
-            <div>Карта №1111111</div>
-        </div>
-    )
+        if (this.props.loading) {
+            return (
+                <div>загрузка</div>
+            )
+        }
+        return this.renderUser()
+        
+    }
+    
 }
 
 const mapStateToProps = (store) => {
     return {
-        data: store.data,
-        loading: store.isLoading
+        users: store.userInfo.data,
+        loading: store.userInfo.isLoading
     }
 }
 
-// export default connect(mapStateToProps)(UserInfo)
+const mapDispatchToProps = (dispatch) => {
+    return {
+        setUserData: (userId) => dispatch(getUserData(userId))
+    }
+}
 
-export default UserInfo
+export default connect(mapStateToProps, mapDispatchToProps)(UserInfo)
