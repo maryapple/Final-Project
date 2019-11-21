@@ -2,7 +2,7 @@
     width: 80%;
     display: flex;
     /* background: rgb(29, 29, 31); */
-    margin: 3rem auto;
+    margin: 1.5rem auto;
     /* flex-grow: 1; */
     height: 30%;
     flex-wrap: wrap;
@@ -11,7 +11,11 @@
 
 button {
     font-size: 2rem !important;
-    width: 30%;
-    margin: .5%;
+    width: 31%;
+    margin: 1.1%;
     height: 6rem;
+}
+
+.btn {
+    border-radius: 0;
 }
