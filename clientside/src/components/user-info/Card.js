@@ -6,7 +6,7 @@ class Card extends React.Component {
     componentDidMount() {
         /* console.log("this.props old", this.props)
         console.log("this.props id card", this.props.cardId) */
-        getCard(this.props.cardId)
+        this.props.getCard(this.props.cardId)
     }
 
     renderCard = () => {
