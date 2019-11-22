@@ -1,8 +1,8 @@
 import React from 'react'
 import './UserInfo.css'
 import { connect } from 'react-redux'
-import { getUserData, getCard } from '../../actions/main-page-actions'
-import Card from './Card'
+import { getUserData } from '../../actions/main-page-actions'
+import Card from './Card.js'
 
 class UserInfo extends React.Component {
     componentDidMount() {
@@ -11,38 +11,29 @@ class UserInfo extends React.Component {
 
     renderUser = () => {
         const { name, cards, accounts } = this.props.users
-
-        /* // Проходимся по массиву карт, чтобы получить id каждый из них и передать в запрос, чтобы оттуда вытянуть информацию по карте
+        // Проходимся по массиву карт, чтобы получить id каждый из них 
+        // и передать в запрос, чтобы оттуда вытянуть информацию по карте
         cards.map(elem => {
-            console.log(elem)
-            this.props.getCard(elem)
+            console.log('i am in cards map')
             return <Card
-                {...elem}
+                cardId={elem}
             />
-        }) */
+        })
         
-
         return (
             <div className="user-info-container">
                 <h1>{name.title + " " + name.first + " " + name.last}</h1>
-
-                {/* Отрисовка карт */}
-                {/* <div>Карта №1111111</div> */}
-                {/* {cards} */}
+                {cards}
             </div>
         )
     }
 
     render() {
         if (this.props.loading) {
-            return (
-                <div>загрузка</div>
-            )
+            return (<div>загрузка</div>)
         }
         return this.renderUser()
-        
     }
-    
 }
 
 const mapStateToProps = (store) => {
@@ -54,8 +45,7 @@ const mapStateToProps = (store) => {
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        setUserData: (userId) => dispatch(getUserData(userId)),
-        getCard:  (cardId) => dispatch(getCard(cardId))
+        setUserData: (userId) => dispatch(getUserData(userId))
     }
 }
 
