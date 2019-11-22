@@ -4,8 +4,8 @@ import { getCard } from '../../actions/main-page-actions'
 
 class Card extends React.Component {
     componentDidMount() {
-        console.log("this.props old", this.props)
-        console.log("this.props id card", this.props.cardId)
+        /* console.log("this.props old", this.props)
+        console.log("this.props id card", this.props.cardId) */
         getCard(this.props.cardId)
     }
 

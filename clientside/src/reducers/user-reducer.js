@@ -23,25 +23,3 @@ export const userInfoReducer = (state = initialState, action) => {
             return state
     }
 }
-
-const initialStateCard = {
-    cardInfo: [],
-    isLoading: true,
-    error: ''
-}
-
-export const cardInfoReducer = (state = initialStateCard, action) => {
-    switch (action.type) {
-        case GET_DATA_REQUEST:
-            return { ...state, isLoading: true }
-
-        case GET_DATA_SUCCESS:
-            return { ...state, isLoading: false, cardInfo: action.payload, error: '' }
-
-        case GET_DATA_FAIL:
-            return { ...state, isLoading: false, cardInfo: action.payload.message }
-
-        default:
-            return state
-    }
-}
