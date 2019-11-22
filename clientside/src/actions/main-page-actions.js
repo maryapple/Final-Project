@@ -4,7 +4,7 @@ const GET_DATA_REQUEST = 'GET_DATA_REQUEST'
 const GET_DATA_SUCCESS = 'GET_DATA_SUCCESS'
 const GET_DATA_FAIL = 'GET_DATA_FAIL'
 
-
+// Action Creator
 const getUserData = (currentId) => {
     return dispatch => {
         dispatch({

@@ -9,10 +9,11 @@ class UserInfo extends React.Component {
     }
 
     renderUser = () => {
+        const { name, cards, accounts } = this.props.users
         return (
             <div className="user-info-container">
-                <h1>{this.props.users.name}</h1>
-                <div>Счет №111111</div>
+                <h1>{name.first}</h1>
+                <div>Счет №{accounts}</div>
                 <div>Карта №1111111</div>
             </div>
         )
