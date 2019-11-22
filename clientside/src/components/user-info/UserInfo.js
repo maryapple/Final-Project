@@ -2,7 +2,8 @@ import React from 'react'
 import './UserInfo.css'
 import { connect } from 'react-redux'
 import getUserData from '../../actions/user-info'
-import Card from './Card.js'
+import Card from './Card'
+import Account from './Account'
 
 class UserInfo extends React.Component {
     componentDidMount() {
@@ -11,6 +12,14 @@ class UserInfo extends React.Component {
 
     renderUser = () => {
         const { name, cards, accounts } = this.props.users
+
+        const accountItems = accounts.map(elem => {
+            return <Account
+                accountId={elem}
+                key={elem}
+            />
+        })
+
         // Проходимся по массиву карт, чтобы получить id каждый из них 
         // и передать в запрос, чтобы оттуда вытянуть информацию по карте
         const cardItems = cards.map(elem => {
@@ -23,6 +32,7 @@ class UserInfo extends React.Component {
         return (
             <div className="user-info-container">
                 <h1>{name.title + " " + name.first + " " + name.last}</h1>
+                {accountItems}
                 {cardItems}
             </div>
         )
