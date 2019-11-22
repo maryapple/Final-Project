@@ -13,17 +13,17 @@ class UserInfo extends React.Component {
         const { name, cards, accounts } = this.props.users
         // Проходимся по массиву карт, чтобы получить id каждый из них 
         // и передать в запрос, чтобы оттуда вытянуть информацию по карте
-        cards.map(elem => {
-            console.log('i am in cards map')
+        const cardItems = cards.map(elem => {
             return <Card
                 cardId={elem}
+                key={elem}
             />
         })
         
         return (
             <div className="user-info-container">
                 <h1>{name.title + " " + name.first + " " + name.last}</h1>
-                {cards}
+                {cardItems}
             </div>
         )
     }

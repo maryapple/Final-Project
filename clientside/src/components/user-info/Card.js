@@ -3,17 +3,18 @@ import { connect } from 'react-redux'
 import { getCard } from '../../actions/main-page-actions'
 
 class Card extends React.Component {
-
-    a = () => {
-        console.log('klkl')
-    }
     componentDidMount() {
-        console.log(this.props)
-        getCard(this.props)
+        console.log("this.props old", this.props)
+        console.log("this.props id card", this.props.cardId)
+        getCard(this.props.cardId)
     }
 
     renderCard = () => {
-        return (<div>Карта №{this.props.number}</div>)
+        const {number} = this.props.cards
+        console.log(this.props.cards)
+        return <div>
+            Карта №{number}
+        </div>
     }
 
     render() {
@@ -26,8 +27,8 @@ class Card extends React.Component {
 
 const mapStateToProps = (store) => {
     return {
-        users: store.userInfo.data,
-        loading: store.userInfo.isLoading
+        loading: store.cardInfo.isLoading,
+        cards: store.cardInfo.cardInfo
     }
 }
 

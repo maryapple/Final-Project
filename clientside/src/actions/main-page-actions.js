@@ -37,7 +37,7 @@ const getCard = (currentId) => {
             .then(data => {
                 dispatch({
                     type: GET_DATA_SUCCESS,
-                    payload: data.data
+                    payload: data.cards
                 })
             })
             .catch(error => {
