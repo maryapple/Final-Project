@@ -12,32 +12,23 @@ class UserInfo extends React.Component {
     renderUser = () => {
         const { name, cards, accounts } = this.props.users
 
-        // Проходимся по массиву счетов, чтобы получить id каждый из них и передать в запрос, чтобы оттуда вытянуть информацию по счету
-        accounts.map(elem => {
-            console.log(elem)
-            return {...elem}
-        })
-
-        // Проходимся по массиву карт, чтобы получить id каждый из них и передать в запрос, чтобы оттуда вытянуть информацию по карте
+        /* // Проходимся по массиву карт, чтобы получить id каждый из них и передать в запрос, чтобы оттуда вытянуть информацию по карте
         cards.map(elem => {
-            // console.log(elem)
+            console.log(elem)
             this.props.getCard(elem)
             return <Card
                 {...elem}
             />
-        })
+        }) */
         
 
         return (
             <div className="user-info-container">
-                <h1>{name.first}</h1>
-
-                {/* Отрисовка счетов */}
-                {/* {accounts} */}
+                <h1>{name.title + " " + name.first + " " + name.last}</h1>
 
                 {/* Отрисовка карт */}
                 {/* <div>Карта №1111111</div> */}
-                {cards}
+                {/* {cards} */}
             </div>
         )
     }
