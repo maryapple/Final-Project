@@ -1,6 +1,6 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import { getCard } from '../../actions/main-page-actions'
+import getCard from '../../actions/card-info'
 
 class Card extends React.Component {
     componentDidMount() {

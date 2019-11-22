@@ -1,6 +1,6 @@
 import { combineReducers } from 'redux'
-import {userInfoReducer} from './user-reducer'
-import {cardInfoReducer} from './card-reducer'
+import {userInfoReducer} from './user-info'
+import {cardInfoReducer} from './card-info'
 
 export default combineReducers({
     userInfo: userInfoReducer,

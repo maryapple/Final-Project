@@ -1,7 +1,7 @@
 import React from 'react'
 import './UserInfo.css'
 import { connect } from 'react-redux'
-import { getUserData } from '../../actions/main-page-actions'
+import getUserData from '../../actions/user-info'
 import Card from './Card.js'
 
 class UserInfo extends React.Component {
