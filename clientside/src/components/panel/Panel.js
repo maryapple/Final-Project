@@ -5,12 +5,27 @@ import {Link} from 'react-router-dom'
 const Panel = () => {
     return (
         <div className="panel-container">
-            <Link className="btn btn-secondary" to='/check-balance'>Баланс</Link>
-            <button type="button" className="btn btn-secondary">Перевод</button>
-            <button type="button" className="btn btn-secondary">Оплата</button>
-            <button type="button" className="btn btn-secondary">Новая карта</button>
-            <button type="button" className="btn btn-secondary">Новый счет</button>
-            <button type="button" className="btn btn-secondary">Взять кредит</button>
+            <Link  to='/check-balance'>
+                <button type="button" className="btn btn-secondary">
+                    Баланс
+                </button>
+                {/* <p>Баланс</p> */}
+            </Link>
+            <button type="button" className="btn btn-secondary">
+                Перевод
+            </button>
+            <button type="button" className="btn btn-secondary">
+                Оплата
+            </button>
+            <button type="button" className="btn btn-secondary">
+                Новая карта
+            </button>
+            <button type="button" className="btn btn-secondary">
+                Новый счет
+            </button>
+            <button type="button" className="btn btn-secondary">
+                Взять кредит
+            </button>
         </div>
     )
 }

@@ -8,11 +8,33 @@
     justify-content: center;
 }
 
-button {
+/* button {
     font-size: 2rem !important;
     width: 31%;
     margin: 1.1%;
     height: 6rem;
+} */
+
+.panel-container Link {
+    border-radius: 0;
+    font-size: 2rem !important;
+    width: 31%;
+    margin: 1.1%;
+    height: 6rem;
+    vertical-align: middle;
+}
+
+.panel-container a {
+    border-radius: 0;
+    font-size: 2rem !important;
+    width: 31%;
+    margin: 1.1%;
+    height: 6rem;
+    vertical-align: middle;
+}
+
+.panel-container a .btn {
+    width: 100%;
 }
 
 .btn {
@@ -22,4 +44,13 @@ button {
     margin: 1.1%;
     height: 6rem;
     vertical-align: middle;
+}
+
+Link {
+    height: 100%;
+    vertical-align: middle;
+}
+
+Link p {
+    height: 100%;
 }

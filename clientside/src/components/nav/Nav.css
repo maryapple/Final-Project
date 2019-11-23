@@ -36,7 +36,7 @@
     justify-content: space-around;
 }
 
-.sidebar ul li:hover {
+.sidebar ul li:hover, .sidebar ul a li:hover {
     opacity: 0.8;
     background: grey;
 }

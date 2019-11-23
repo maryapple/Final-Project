@@ -1,5 +1,4 @@
 import React from 'react'
-import Nav from '../components/nav'
 import UserInfo from '../components/user-info'
 import Panel from '../components/panel'
 
