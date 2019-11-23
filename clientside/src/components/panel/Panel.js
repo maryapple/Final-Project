@@ -1,10 +1,11 @@
 import React from 'react'
 import './Panel.css'
+import {Link} from 'react-router-dom'
 
 const Panel = () => {
     return (
         <div className="panel-container">
-            <button type="button" className="btn btn-secondary">Баланс</button>
+            <Link className="btn btn-secondary" to='/check-balance'>Баланс</Link>
             <button type="button" className="btn btn-secondary">Перевод</button>
             <button type="button" className="btn btn-secondary">Оплата</button>
             <button type="button" className="btn btn-secondary">Новая карта</button>

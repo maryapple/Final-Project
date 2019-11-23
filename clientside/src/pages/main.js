@@ -5,12 +5,9 @@ import Panel from '../components/panel'
 
 const MainPage = () => {
     return (
-        <div className="main-container">
-            <Nav />
-            <div className="main-page-container">
-                <Panel />
-                <UserInfo />
-            </div>
+        <div className="main-page-container">
+            <Panel />
+            <UserInfo />
         </div>
     )
 }

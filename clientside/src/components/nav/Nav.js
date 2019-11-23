@@ -10,14 +10,19 @@ const Nav = () => {
                 </div>
                 <ul>
                     <li>
-                        <div className="li-content">
+                        {/* <div className="li-content">
                             <div className="li-icon">
                                 <i className="fas fa-home fa-3x"></i>
                             </div>
-                            {/* <div className="li-text">
+                            ------
+                             <div className="li-text">
                                 home
-                            </div> */}
-                        </div>
+                            </div> 
+                            ------
+                        </div> */}
+                        <a href="/">
+                            <i className="fas fa-user fa-3x"></i>
+                        </a>
                     </li>
                     <li>
                         <a href="#">
