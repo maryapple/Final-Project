@@ -1,5 +1,6 @@
 import React from 'react'
 import './Nav.css'
+import { Link } from 'react-router-dom'
 
 const Nav = () => {
     return (
@@ -10,19 +11,9 @@ const Nav = () => {
                 </div>
                 <ul>
                     <li>
-                        {/* <div className="li-content">
-                            <div className="li-icon">
-                                <i className="fas fa-home fa-3x"></i>
-                            </div>
-                            ------
-                             <div className="li-text">
-                                home
-                            </div> 
-                            ------
-                        </div> */}
-                        <a href="/">
-                            <i className="fas fa-user fa-3x"></i>
-                        </a>
+                        <Link to="/">
+                            <i className="fas fa-home fa-3x"></i>
+                        </Link>
                     </li>
                     <li>
                         <a href="#">
