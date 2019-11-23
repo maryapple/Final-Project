@@ -4,27 +4,31 @@
         "number": "1234 5678 1234 5678",
         "until": "01-01-2020",
         "registered": "01-01-2010",
-        "balance, rub": "1000.00"
+        "balance": "1000.00",
+        "type": "Classic"
     },
     {
         "id": "10000002",
         "number": "1234 5678 2345 6789",
         "until": "01-01-2020",
         "registered": "01-01-2010",
-        "balance, rub": "10000.00"
+        "balance": "10000.00",
+        "type": "Visa Gold"
     },
     {
         "id": "10000003",
         "number": "2234 6678 2234 6678",
         "until": "01-01-2020",
         "registered": "01-01-2010",
-        "balance, rub": "100.00"
+        "balance": "100.00",
+        "type": "Super Cashback"
     },
     {
         "id": "10000004",
         "number": "3333 6678 2234 6678",
         "until": "01-01-2020",
         "registered": "01-01-2010",
-        "balance, rub": "10.00"
+        "balance": "10.00",
+        "type": "Junior"
     }
 ]
