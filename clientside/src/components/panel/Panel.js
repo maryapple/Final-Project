@@ -12,10 +12,10 @@ const Panel = () => {
                 {/* <p>Баланс</p> */}
             </Link>
             <button type="button" className="btn btn-secondary">
-                Перевод
+                Переводы и платежи
             </button>
             <button type="button" className="btn btn-secondary">
-                Оплата
+                Курсы валют
             </button>
             <button type="button" className="btn btn-secondary">
                 Новая карта

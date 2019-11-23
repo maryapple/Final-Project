@@ -32,7 +32,9 @@ class UserInfo extends React.Component {
         return (
             <div className="user-info-container">
                 <h1>{name.title + " " + name.first + " " + name.last}</h1>
+                <h4>Ваши счета:</h4>
                 {accountItems}
+                <h4>Ваши карты:</h4>
                 {cardItems}
             </div>
         )
