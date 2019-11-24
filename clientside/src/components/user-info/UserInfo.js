@@ -15,19 +15,15 @@ class UserInfo extends React.Component {
 
         const accountItems = accounts.map(elem => {
             return <Account
-                accountId={elem}
-                key={elem}
+                number={elem.number}
+                key={elem.id}
             />
         })
 
-        // console.log(accountItems)
-
-        // Проходимся по массиву карт, чтобы получить id каждый из них 
-        // и передать в запрос, чтобы оттуда вытянуть информацию по карте
         const cardItems = cards.map(elem => {
             return <Card
-                cardId={elem}
-                key={elem}
+                number={elem.number}
+                key={elem.id}
             />
         })
         

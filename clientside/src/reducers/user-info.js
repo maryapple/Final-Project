@@ -14,6 +14,7 @@ export const userInfoReducer = (state = initialState, action) => {
             return { ...state, isLoading: true }
 
         case GET_DATA_SUCCESS:
+            console.log(action.payload)
             return { ...state, isLoading: false, data: action.payload, error: '' }
 
         case GET_DATA_FAIL:
