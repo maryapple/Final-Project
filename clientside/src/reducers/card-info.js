@@ -11,18 +11,17 @@ const initialStateCard = {
 export const cardInfoReducer = (state = initialStateCard, action) => {
     switch (action.type) {
         case GET_DATA_CARD_REQUEST:
-            // console.log('request')
             return { ...state, isLoading: true }
 
         case GET_DATA_CARD_SUCCESS:
-            // console.log('success')
-            return { ...state, isLoading: false, cardInfo: action.payload, error: '' }
+            const a = state['accountInfo']
+            const b = a.concat(action.payload)
+            return { ...state, isLoading: false, cardInfo: b, error: '' }
 
         case GET_DATA_CARD_FAIL:
             return { ...state, isLoading: false, cardInfo: action.payload.message }
 
         default:
-            // console.log('default')
             return state
     }
 }

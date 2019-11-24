@@ -15,8 +15,10 @@ export const accountInfoReducer = (state = initialStateAccount, action) => {
             return { ...state, isLoading: true }
 
         case GET_DATA_ACCOUNT_SUCCESS:
-            // console.log('success')
-            return { ...state, isLoading: false, accountInfo: action.payload, error: '' }
+            const a = state['accountInfo']
+            const b = a.concat(action.payload)
+            // console.log(b)
+            return { ...state, isLoading: false, accountInfo: b, error: '' }
 
         case GET_DATA_ACCOUNT_FAIL:
             return { ...state, isLoading: false, accountInfo: action.payload.message }

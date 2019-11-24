@@ -3,24 +3,31 @@ import { connect } from 'react-redux'
 import getAccount from '../../actions/account-info'
 
 class Account extends React.Component {
-    componentDidMount() {
+    constructor (props) {
+        super(props)
         this.props.getAccount(this.props.accountId)
     }
+/*     componentDidMount() {
+        this.props.getAccount(this.props.accountId)
+    } */
 
     renderAccount = () => {
-        const { number } = this.props.accounts
-        console.log("props of account, component Account:", this.props.accounts)
-        // console.log("number current:", number)
-        return <div>
-            Счет №{number}
-        </div>
+        console.log("ACCOUNTS:", this.props.accounts)
+        return (
+            this.props.accounts.map(elem => {
+                console.log("ELEM", elem)
+                return <div key={elem.id}>
+                    Счет №{elem.number}
+                </div>
+            })
+        )
     }
 
     render() {
+        // console.log("ACCOUNTS:", this.props.accounts)
         if (this.props.loading) {
             return (<div>загрузка</div>)
         }
-        // console.log(this.renderAccount())
         return this.renderAccount()
     }
 }

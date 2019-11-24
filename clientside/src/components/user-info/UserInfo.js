@@ -20,8 +20,7 @@ class UserInfo extends React.Component {
             />
         })
 
-
-        console.log(accountItems)
+        // console.log(accountItems)
 
         // Проходимся по массиву карт, чтобы получить id каждый из них 
         // и передать в запрос, чтобы оттуда вытянуть информацию по карте

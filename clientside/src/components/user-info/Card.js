@@ -4,18 +4,17 @@ import getCard from '../../actions/card-info'
 
 class Card extends React.Component {
     componentDidMount() {
-        /* console.log("this.props old", this.props)
-        console.log("this.props id card", this.props.cardId) */
         this.props.getCard(this.props.cardId)
     }
 
     renderCard = () => {
+        
         const {number} = this.props.cards
-        // console.log("props of cards", this.props.cards)
         return <div>
             Карта №{number}
         </div>
     }
+    
 
     render() {
         if (this.props.loading) {
