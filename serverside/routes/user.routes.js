@@ -63,7 +63,7 @@ router.post('/', m.checkFieldsUser, async (req, res) => {
         .catch(err => res.status(500).json({ message: err.message }))
 })
 
-/* router.put('/:id', m.mustBeInteger, m.checkFieldsUser, async (req, res) => {
+router.put('/:id', m.mustBeInteger, m.checkFieldsUser, async (req, res) => {
     const id = req.params.id
     await user.updateUser(id, req.body)
         .then(user => res.json({
@@ -76,4 +76,4 @@ router.post('/', m.checkFieldsUser, async (req, res) => {
             }
             res.status(500).json({ message: err.message })
         })
-}) */
+})

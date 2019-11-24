@@ -7,8 +7,6 @@ class Balance extends React.Component {
     renderAccountsAndCards = () => {
         let totalBalanceAccount = 0
 
-
-
         const accountItems = this.props.users.accounts.map(elem => {
             totalBalanceAccount += parseInt(elem.balance)
             return (<div className="account-details-div">
