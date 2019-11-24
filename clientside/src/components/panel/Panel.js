@@ -10,21 +10,34 @@ const Panel = () => {
                     Баланс
                 </button>
             </Link>
-            <button type="button" className="btn btn-secondary">
+            <Link to='/transfers-payments'>
+                <button type="button" className="btn btn-secondary">
+                    Переводы и платежи
+                </button>
+            </Link>
+            {/* <button type="button" className="btn btn-secondary">
                 Переводы и платежи
-            </button>
-            <button type="button" className="btn btn-secondary">
-                Курсы валют
-            </button>
-            <button type="button" className="btn btn-secondary">
-                Новая карта
-            </button>
-            <button type="button" className="btn btn-secondary">
-                Новый счет
-            </button>
-            <button type="button" className="btn btn-secondary">
-                Взять кредит
-            </button>
+            </button> */}
+            <Link to='/currencies-deposites'>
+                <button type="button" className="btn btn-secondary">
+                    Курсы валют
+                </button>
+            </Link>
+            <Link to='/new-card'>
+                <button type="button" className="btn btn-secondary">
+                    Новая карта
+                </button>
+            </Link>
+            <Link to="/new-account">
+                <button type="button" className="btn btn-secondary">
+                    Новый счет
+                </button>
+            </Link>
+            <Link to="/loan">
+                <button type="button" className="btn btn-secondary">
+                    Взять кредит
+                </button>
+            </Link>
         </div>
     )
 }
