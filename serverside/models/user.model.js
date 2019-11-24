@@ -68,7 +68,7 @@ function updateUser(id, newUser) {
                     name: helper.generateName()
                 }
                 const email = {
-                    email: helper.generateEmail()
+                    email: helper.generateEmail(users)
                 }
                 users[index] = { ...id, ...name, ...email, ...newUser }
                 helper.writeJSONFile(configPath, users)
