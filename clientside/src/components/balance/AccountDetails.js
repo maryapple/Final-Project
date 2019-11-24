@@ -8,12 +8,12 @@ class AccountWithDetails extends React.Component {
     }
 
     renderAccount = () => {
-        const { number, until } = this.props.accounts
-        console.log(this.props.accounts)
-        return <div>
-            <div>Счет №{number}</div>
+        const { number, until, balance } = this.props.accounts
+        // console.log(this.props.accounts)
+        return <div className="account-details-div">
+            <div className="account-details-number">Счет №{number}</div>
             <div>Действителен до {until}</div>
-            <div>Баланс</div>
+            <div>Баланс {balance}</div>
         </div>
     }
 

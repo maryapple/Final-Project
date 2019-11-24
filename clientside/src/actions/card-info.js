@@ -12,7 +12,7 @@ const getCard = (currentId) => {
 
         axios.get(`/api/cards/${currentId}`)
             .then(data => {
-                console.log(data.data)
+                // console.log(data.data)
                 dispatch({
                     type: GET_DATA_CARD_SUCCESS,
                     payload: data.data

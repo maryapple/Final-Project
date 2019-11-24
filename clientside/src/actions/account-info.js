@@ -12,7 +12,7 @@ const getAccount = (currentId) => {
 
         axios.get(`/api/accounts/${currentId}`)
             .then(data => {
-                console.log(data.data)
+                // console.log("account:", data.data)
                 dispatch({
                     type: GET_DATA_ACCOUNT_SUCCESS,
                     payload: data.data

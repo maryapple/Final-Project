@@ -11,7 +11,7 @@ class Card extends React.Component {
 
     renderCard = () => {
         const {number} = this.props.cards
-        console.log(this.props.cards)
+        // console.log("props of cards", this.props.cards)
         return <div>
             Карта №{number}
         </div>

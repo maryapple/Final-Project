@@ -11,18 +11,18 @@ const initialStateAccount = {
 export const accountInfoReducer = (state = initialStateAccount, action) => {
     switch (action.type) {
         case GET_DATA_ACCOUNT_REQUEST:
-            console.log('request')
+            // console.log('request')
             return { ...state, isLoading: true }
 
         case GET_DATA_ACCOUNT_SUCCESS:
-            console.log('success')
+            // console.log('success')
             return { ...state, isLoading: false, accountInfo: action.payload, error: '' }
 
         case GET_DATA_ACCOUNT_FAIL:
             return { ...state, isLoading: false, accountInfo: action.payload.message }
 
         default:
-            console.log('default')
+            // console.log('default')
             return state
     }
 }

@@ -9,7 +9,8 @@ class Account extends React.Component {
 
     renderAccount = () => {
         const { number } = this.props.accounts
-        console.log(this.props.accounts)
+        console.log("props of account, component Account:", this.props.accounts)
+        // console.log("number current:", number)
         return <div>
             Счет №{number}
         </div>
@@ -19,6 +20,7 @@ class Account extends React.Component {
         if (this.props.loading) {
             return (<div>загрузка</div>)
         }
+        // console.log(this.renderAccount())
         return this.renderAccount()
     }
 }
