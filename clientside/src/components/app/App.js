@@ -4,6 +4,7 @@ import {BrowserRouter, Route, Switch} from 'react-router-dom'
 import {MainPage} from '../../pages/index'
 import Nav from '../nav'
 import BalancePage from '../../pages/balance'
+import CurrenciesPage from '../../pages/currencies'
 
 export default class App extends Component {
 	render() {
@@ -20,6 +21,10 @@ export default class App extends Component {
 						<Route
 							path="/check-balance"
 							component={BalancePage}
+						/>
+						<Route
+							path="/currencies"
+							component={CurrenciesPage}
 						/>
 					</div>
 				</Switch>

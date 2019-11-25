@@ -1,0 +1,40 @@
+.currencies-container {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    margin: 1.5rem auto;
+}
+
+.currencies-header {
+    font-size: 2rem;
+    font-weight: 800;
+}
+
+.field {
+    margin-top: .5rem;
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    font-size: 1rem;
+    font-size: 1.25rem;
+}
+
+table {
+    margin-top: 2rem;
+    width: 50%;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+/* tr, td, th, table {
+    border: 1px solid black;
+} */
+tr {
+    height: 2rem;
+    width: 100%;
+}
+
+.converter-header {
+    margin-top: 2rem;
+    font-size: 1.5rem;
+}
