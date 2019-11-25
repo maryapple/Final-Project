@@ -17,16 +17,12 @@ const Nav = () => {
                     </li>
                     <li>
                         <Link to="/my-account">
-                            <a href="#">
-                                <i className="fas fa-user fa-3x"></i>
-                            </a>
+                            <i className="fas fa-user fa-3x"></i>
                         </Link>
                     </li>
                     <li>
                         <Link to="/settings">
-                            <a href="#">
-                                <i className="fas fa-cog fa-3x"></i>
-                            </a>
+                            <i className="fas fa-cog fa-3x"></i>
                         </Link>
                     </li>
                 </ul>
