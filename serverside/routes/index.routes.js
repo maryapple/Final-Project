@@ -5,3 +5,4 @@ module.exports = router
 router.use('/api/users', require('./user.routes'))
 router.use('/api/cards', require('./card.routes'))
 router.use('/api/accounts', require('./account.routes'))
+router.use('/api/auth', require('./auth.routes'))
