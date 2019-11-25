@@ -20,15 +20,11 @@ router.post('/login', (req, res) => {
 
 router.post('/register', async (req, res) => {
     const candidate = await data.find( (user) => 
-        { 
-            console.log(user.email, req.body.email)
+        {
             if (user.email === req.body.email) {
-                console.log('equal')
+                return 1
             }
-            else {
-                console.log('different')
-            }
-            user.email === req.body.email 
+            return 0
         }
     )
     if (candidate) {

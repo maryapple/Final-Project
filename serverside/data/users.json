@@ -292,10 +292,6 @@
     },
     {
         "email": "exmpl@example.com",
-        "password": "$2a$10$MetCZi0uRFuqBqN704Ri5OI0GgUbjPmK7y206c3f1zG4lHI7steBC"
-    },
-    {
-        "email": "exmpl@example.com",
-        "password": "$2a$10$ibfX4LyGC/cbLHS1ikPppu5C/JFpBMT7yjIAmbaB7rflYO9d3Rb8G"
+        "password": "$2a$10$Ef3QbjhlhqLkkUE/lVJRG.dSFAT.GAS.fLrYKtpDR1M9mdw1I6Zqi"
     }
 ]
