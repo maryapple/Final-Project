@@ -2,6 +2,9 @@ import React from 'react'
 import './Currencies.css'
 import { connect } from 'react-redux'
 import getExchangeRate from '../../actions/currencies'
+import updateInput from '../../actions/updateInput'
+import Input from './Input'
+import Display from './Display'
 
 class Currencies extends React.Component {
     componentDidMount () {
@@ -10,12 +13,6 @@ class Currencies extends React.Component {
 
     renderCurr = () => {
         const { USD, EUR, RUB } = this.props.currencies
-        // console.log(USD, EUR)
-
-        const onInputChange = () => {
-            alert('12')
-        }
-
         return (
             <div className="currencies-container">
                 <div className="currencies-header">Перевод денежных средств в иностранные валюты</div>
@@ -37,18 +34,14 @@ class Currencies extends React.Component {
                 </table>
 
                 <div className="converter-header">Конвертер суммы</div>
+
                 <div className="field">
-                    <label htmlFor="sum-to-exchange">Введите сумму (в рублях)</label>
-                    <input
-                        id="sum-to-exchange"
-                        onChange={this.onInputChange}
-                        maxLength="9"
-                        minLength="1"
-                        pattern="[0-9]*"
-                    />
-                    
+                    <label>Введите сумму (в рублях)</label>
+                    <Input />
                     <div>Сумма в евро: </div>
+                    <Display curr={'EUR'}/>
                     <div>Сумма в долларах: </div>
+                    <Display curr={'USD'} />
                 </div>
             </div>
         )
@@ -58,10 +51,7 @@ class Currencies extends React.Component {
             this.renderCurr()
         )
     }
-    
 }
-
-// export default Currencies
 
 const mapStateToProps = (store) => {
     return {
@@ -71,7 +61,8 @@ const mapStateToProps = (store) => {
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        getExchangeRate: (curr1, curr2) => dispatch(getExchangeRate(curr1, curr2))
+        getExchangeRate: () => dispatch(getExchangeRate()),
+        updateInput: (input) => dispatch(updateInput(input))
     }
 }
 
