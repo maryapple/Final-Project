@@ -16,14 +16,18 @@ const Nav = () => {
                         </Link>
                     </li>
                     <li>
-                        <a href="#">
-                            <i className="fas fa-user fa-3x"></i>
-                        </a>
+                        <Link to="/my-account">
+                            <a href="#">
+                                <i className="fas fa-user fa-3x"></i>
+                            </a>
+                        </Link>
                     </li>
                     <li>
-                        <a href="#">
-                            <i className="fas fa-cog fa-3x"></i>
-                        </a>
+                        <Link to="/settings">
+                            <a href="#">
+                                <i className="fas fa-cog fa-3x"></i>
+                            </a>
+                        </Link>
                     </li>
                 </ul>
             </nav>
