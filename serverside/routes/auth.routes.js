@@ -14,14 +14,12 @@ const keys = require('../config/keys')
 
 router.post('/login', async (req, res) => {
     console.log('req body login', req.body.user)
-    console.log('---', req.body)
     const candidate = await data.find((user) => {
         if (user.email === req.body.user.email) {
             return 1
         }
         return 0
     })
-    // console.log('candidate', candidate)
     if (candidate) {
         console.log('candidate', candidate)
         const passwordResult = bcrypt.compareSync(req.body.user.password, candidate.password)
@@ -30,7 +28,6 @@ router.post('/login', async (req, res) => {
                 email: candidate.email,
                 userId: candidate.userId
                 /* name: {
-                    title: candidate.name.title,
                     first: candidate.name.first,
                     last: candidate.name.last
                 } */
@@ -54,7 +51,7 @@ router.post('/login', async (req, res) => {
 })
 
 router.post('/register', async (req, res) => {
-    console.log('!!!!!!!!!!!!!!!!!!!',req.body.user)
+    // console.log('!!!!!!!!!!!!!!!!!!!',req.body.user)
     const candidate = await data.find( (user) => 
         {
             if (user.email === req.body.user.email) {
@@ -69,22 +66,21 @@ router.post('/register', async (req, res) => {
         })
     }
     else {
+        // console.log("BODY", req.body)
         const salt = bcrypt.genSaltSync(10)
         const password = req.body.user.password
-        // console.log(req.body.name.title)
         const newUser = {
-            id: helper.getNewId(data),
+            id: helper.getNewId(data).toString(),
             email: req.body.user.email,
-            gender: req.body.user.gender,
-            /* name: {
-                title: req.body.name.title,
-                first: req.body.name.first,
-                last: req.body.name.last
-            }, */
+            name: {
+                first: req.body.user.first,
+                last: req.body.user.last
+            },
             password: bcrypt.hashSync(password, salt),
             registered: helper.newDate(),
             phone: req.body.user.phone
         }
+        console.log(helper.newDate())
         console.log(newUser)
         data.push(newUser)
 

@@ -35,35 +35,14 @@
                 "balance": "20000.00"
             }
         ],
-        "gender": "male",
         "name": {
-            "title": "Mr",
             "first": "Karl",
             "last": "Lewis"
         },
-        "location": {
-            "street": {
-                "number": 9872,
-                "name": "Preston Rd"
-            },
-            "city": "Mesquite",
-            "state": "Pennsylvania",
-            "country": "United States",
-            "postcode": 98641
-        },
         "email": "karl.lewis@example.com",
-        "login": {
-            "username": "purplebutterfly141",
-            "password": "fallon"
-        },
-        "registered": {
-            "date": "2008-06-24T12:34:51.325Z",
-            "age": 11
-        },
-        "phone": "(957)-641-5543",
-        "picture": {
-            "medium": "https://randomuser.me/api/portraits/med/men/24.jpg"
-        }
+        "password": "fallon",
+        "registered": "2008-06-24T12:34:51.325Z",
+        "phone": "(957)-641-5543"
     },
     {
         "id": "2",
@@ -86,244 +65,78 @@
                 "balance": "44440.00"
             }
         ],
-        "gender": "female",
         "name": {
-            "title": "Miss",
             "first": "Zofia",
             "last": "Moksnes"
         },
-        "location": {
-            "street": {
-                "number": 2916,
-                "name": "Islands gate"
-            },
-            "city": "Skulestadmoen",
-            "state": "Finnmark - Finnmárku",
-            "country": "Norway",
-            "postcode": "5305"
-        },
         "email": "zofia.moksnes@example.com",
-        "login": {
-            "username": "lazybutterfly726",
-            "password": "ginger"
-        },
-        "registered": {
-            "date": "2011-06-20T18:40:10.610Z",
-            "age": 8
-        },
-        "phone": "66903364",
-        "picture": {
-            "medium": "https://randomuser.me/api/portraits/med/women/71.jpg"
-        }
+        "password": "ginger",
+        "registered": "2011-06-20T18:40:10.610Z",
+        "phone": "66903364"
     },
     {
         "id": "3",
-        "gender": "female",
+        "cards": [
+            {
+                "id": "10000004",
+                "number": "3333 6678 2234 6678",
+                "until": "01-01-2020",
+                "registered": "01-01-2010",
+                "balance": "10.00",
+                "type": "Junior"
+            }
+        ],
         "name": {
-            "title": "Ms",
             "first": "Siril",
             "last": "Mogstad"
         },
-        "location": {
-            "street": {
-                "number": 1396,
-                "name": "Valborgs vei"
-            },
-            "city": "Brønnsletten",
-            "state": "Hedmark",
-            "country": "Norway",
-            "postcode": "6067"
-        },
         "email": "siril.mogstad@example.com",
-        "login": {
-            "username": "organicfish527",
-            "password": "dark"
-        },
-        "registered": {
-            "date": "2005-02-09T07:44:28.984Z",
-            "age": 14
-        },
-        "phone": "37777196",
-        "picture": {
-            "medium": "https://randomuser.me/api/portraits/med/women/24.jpg"
-        }
+        "password": "dark",
+        "registered": "2005-02-09T07:44:28.984Z",
+        "phone": "37777196"
     },
     {
         "id": "4",
-        "gender": "male",
         "name": {
-            "title": "Mr",
             "first": "آرش",
             "last": "کوتی"
         },
-        "location": {
-            "street": {
-                "number": 4936,
-                "name": "شهید رحمانی"
-            },
-            "city": "گلستان",
-            "state": "قزوین",
-            "country": "Iran",
-            "postcode": 93484
-        },
         "email": "arsh.khwty@example.com",
-        "login": {
-            "username": "redgoose841",
-            "password": "attack"
-        },
-        "registered": {
-            "date": "2002-06-22T02:26:36.751Z",
-            "age": 17
-        },
-        "phone": "089-40867810",
-        "picture": {
-            "medium": "https://randomuser.me/api/portraits/med/men/81.jpg"
-        }
+        "password": "attack",
+        "registered": "2002-06-22T02:26:36.751Z",
+        "phone": "089-40867810"
     },
     {
         "id": "5",
-        "gender": "male",
         "name": {
-            "title": "Monsieur",
             "first": "Marius",
             "last": "Dufour"
         },
-        "location": {
-            "street": {
-                "number": 5504,
-                "name": "Rue Duquesne"
-            },
-            "city": "Schluein",
-            "state": "Graubünden",
-            "country": "Switzerland",
-            "postcode": 6048
-        },
         "email": "marius.dufour@example.com",
-        "login": {
-            "username": "organiczebra540",
-            "password": "gandalf1"
-        },
-        "registered": {
-            "date": "2012-03-16T07:59:36.993Z",
-            "age": 7
-        },
-        "phone": "078 216 76 73",
-        "picture": {
-            "medium": "https://randomuser.me/api/portraits/med/men/45.jpg"
-        }
+        "password": "gandalf1",
+        "registered": "2012-03-16T07:59:36.993Z",
+        "phone": "078 216 76 73"
     },
     {
         "id": "6",
-        "gender": "female",
         "name": {
-            "title": "Miss",
             "first": "Livia",
             "last": "Olivier"
         },
-        "location": {
-            "street": {
-                "number": 2667,
-                "name": "Rue Dugas-Montbel"
-            },
-            "city": "Le Havre",
-            "state": "Tarn-et-Garonne",
-            "country": "France",
-            "postcode": 92395
-        },
         "email": "livia.olivier@example.com",
-        "login": {
-            "username": "tinytiger295",
-            "password": "1a2b3c"
-        },
-        "registered": {
-            "date": "2012-09-04T00:19:49.770Z",
-            "age": 7
-        },
-        "phone": "02-94-73-58-80",
-        "picture": {
-            "medium": "https://randomuser.me/api/portraits/med/women/48.jpg"
-        }
+        "password": "1a2b3c",
+        "registered": "2012-09-04T00:19:49.770Z",
+        "phone": "02-94-73-58-80"
     },
     {
-        "id": 7,
-        "email": "lelelele.nanana@example.com",
-        "gender": "female",
-        "name": {},
-        "password": "$2a$10$1tII.Nq0IqUIN7UgJhEQKOB3r7AX1nf8Lmf4mIEXycWg/TfrWs9Mm",
-        "phone": "66903364"
-    },
-    {
-        "id": 8,
-        "email": "lelejlkjkljkljlkjkljljlele.nanana@example.com",
-        "gender": "female",
-        "name": {},
-        "password": "$2a$10$XU1sBiQt.Ji8PJKFBj5b5.grlrh7PStggDtuCNfgbFVpuHeG0u.Ha",
-        "phone": "66903364"
-    },
-    {
-        "id": 9,
-        "email": "ex@example.com",
-        "gender": "female",
-        "name": {},
-        "password": "$2a$10$ViXdn5fCgBKRX4nlk6R5E.brIWPDjrEs1ER9y5mimb5d5YA9JYR6m",
-        "phone": "66903364"
-    },
-    {
-        "id": 10,
-        "email": "aaaa@example.com",
-        "gender": "female",
-        "name": {},
-        "password": "$2a$10$8cv9xJD.eMay8U8HW8YI5e5HX.idY5Bip5IxnEc72B3Ib7xo5V3Qu",
-        "phone": "66903364"
-    },
-    {
-        "id": 11,
-        "email": "qwerty@example.com",
-        "gender": "female",
+        "id": "7",
+        "email": "maria@gmail.com",
         "name": {
-            "title": "Miss",
-            "first": "Nana",
-            "last": "Nananana"
+            "first": "Мария",
+            "last": "Курышева"
         },
-        "password": "$2a$10$obYOvJ1wX0NJ7cDWheZTr.XG/HALcZ5Eyri8LMK/7bfqAN0X/RrSm",
-        "phone": "66903364"
-    },
-    {
-        "id": 12
-    },
-    {
-        "id": 13,
-        "email": "poopoiy@example.com",
-        "gender": "female",
-        "password": "$2a$10$VxHhIjGuAK7eeQaqfcdRT.RsCOvs6fAD5AITPutHORFQCM84GdyHu",
-        "phone": "66903364"
-    },
-    {
-        "id": 14,
-        "email": "ggg@gmail.com",
-        "gender": "oio;i",
-        "password": "$2a$10$uoyjnFfW.Wd2l8.nmiGcfeSKrPK5aXbBKjXRIaVa3DpH/jLcS6z46",
-        "phone": "uiyyk"
-    },
-    {
-        "id": 15,
-        "email": "ggg@gmail.com1",
-        "gender": "oio;i",
-        "password": "$2a$10$h55QwWh3ujUusZE7cJU9Fu2nn1aBLENx76AtgiJ.a.g90r6uJO6S6",
-        "phone": "uiyyk"
-    },
-    {
-        "id": 16,
-        "email": "mdkurysheva@edu.hse.ru",
-        "gender": "uuu",
-        "password": "$2a$10$z6MAHaSLVSTQMaJYxj21quPYYhbj2bc84WFAwBNegerBeuJ2zUM7e",
-        "phone": "+7 (909) 163-30-65"
-    },
-    {
-        "id": 17,
-        "email": "mdkur@edu.hse.ru",
-        "gender": "uuu",
-        "password": "$2a$10$YgI7zL8tTO7Y6JXud79phOzOEkj/KWB0.Ul.rxOA1rOWE3nPfcQLq",
-        "phone": "+7 (909) 163-30-65"
+        "password": "$2a$10$mUZcMHOlxEOPBFUqBQTwLuXwIg9bVT.F5JNm4PNR7gmHJ9rVCYgYm",
+        "registered": "2019-11-26T22:29:59.284Z",
+        "phone": "8800553535"
     }
 ]

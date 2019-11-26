@@ -23,40 +23,22 @@ class Register extends React.Component {
                     onSubmit={this.onSubmit}
                     render={({ handleSubmit, form, submitting, pristine, values }) => (
                         <form onSubmit={handleSubmit}>
-                            {/* <div>
-                                <label>Тайтл</label>
-                                <Field
-                                    name="title"
-                                    component="input"
-                                    type="text"
-                                    placeholder="Mr/Ms"
-                                />
-                            </div>
                             <div>
                                 <label>Имя</label>
                                 <Field
-                                    name="firstName"
+                                    name="first"
                                     component="input"
                                     type="text"
-                                    placeholder="First Name"
+                                    placeholder="Имя"
                                 />
                             </div>
                             <div>
                                 <label>Фамилия</label>
                                 <Field
-                                    name="lastName"
+                                    name="last"
                                     component="input"
                                     type="text"
-                                    placeholder="Last Name"
-                                />
-                            </div> */}
-                            <div>
-                                <label>Пол</label>
-                                <Field
-                                    name="gender"
-                                    component="input"
-                                    type="text"
-                                    placeholder="Пол"
+                                    placeholder="Фамилия"
                                 />
                             </div>
                             <div>
@@ -78,11 +60,11 @@ class Register extends React.Component {
                                 />
                             </div>
                             <div>
-                                <label>Пароля</label>
+                                <label>Пароль</label>
                                 <Field
                                     name="password"
                                     component="input"
-                                    type="text"
+                                    type="password"
                                     placeholder="Пароль"
                                 />
                             </div>
@@ -98,8 +80,6 @@ class Register extends React.Component {
                                     Очистить
                                 </button>
                             </div>
-
-                            {/* <pre>{JSON.stringify(values, 0, 2)}</pre> */}
                         </form>
                     )}
                 />

@@ -64,7 +64,7 @@ function writeJSONFile(filename, content) {
     })
 }
 
-const newDate = () => { new Date().toISOString() }
+const newDate = () => { return new Date().toISOString() }
 
 function randomNum(min, max) {
     var rand = min - 0.5 + Math.random() * (max - min + 1)

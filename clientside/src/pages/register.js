@@ -4,7 +4,7 @@ import Register from '../components/register'
 const RegisterPage = () => {
     return (
         <div className="auth-container">
-                <Register />
+            <Register />
         </div>
     )
 }

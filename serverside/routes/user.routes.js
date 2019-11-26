@@ -23,7 +23,7 @@ router.get('/:id', m.mustBeInteger, async (req, res) => {
     const id = req.params.id
     await user.getUser(id)
         .then(user => {
-            console.log('user.routes.js get id')
+            // console.log('user.routes.js get id')
             // take user account
             res.json(user)
             // makeObj(user)
@@ -40,13 +40,13 @@ router.get('/:id', m.mustBeInteger, async (req, res) => {
 
 router.delete('/:id', m.mustBeInteger, async (req, res) => {
     const id = req.params.id
-    console.log('router delete id', id)
+    // console.log('router delete id', id)
     await user.deleteUser(id)
         .then(user => res.json({
             message: `The user #${id} has been deleted`
         }))
         .catch(err => {
-            console.log('error id ', id)
+            // console.log('error id ', id)
             if (err.status) {
                 res.status(err.status).json({ message: err.message })
             }

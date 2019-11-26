@@ -4,7 +4,7 @@ import {BrowserRouter, Route, Switch} from 'react-router-dom'
 import MainPage from '../../pages/main'
 import BalancePage from '../../pages/balance'
 import CurrenciesPage from '../../pages/currencies'
-import AuthPage from '../../pages/auth'
+import LoginPage from '../../pages/login'
 import RegisterPage from '../../pages/register'
 
 export default class App extends Component {
@@ -12,27 +12,27 @@ export default class App extends Component {
 		return (
 			<BrowserRouter>
 				<Switch>
-						<Route
-							path="/login"
-							component={AuthPage}
-						/>
-						<Route
-							path="/register"
-							component={RegisterPage}
-						/>
-						<Route
-							path="/"
-							component={MainPage}
-							exact
-						/>
-						<Route
-							path="/check-balance"
-							component={BalancePage}
-						/>
-						<Route
-							path="/currencies"
-							component={CurrenciesPage}
-						/>
+					<Route
+						path="/login"
+						component={LoginPage}
+					/>
+					<Route
+						path="/register"
+						component={RegisterPage}
+					/>
+					<Route
+						path="/"
+						component={MainPage}
+						exact
+					/>
+					<Route
+						path="/check-balance"
+						component={BalancePage}
+					/>
+					<Route
+						path="/currencies"
+						component={CurrenciesPage}
+					/>
 				</Switch>
 			</BrowserRouter>
 		)

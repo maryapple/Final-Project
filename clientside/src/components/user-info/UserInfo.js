@@ -29,7 +29,7 @@ class UserInfo extends React.Component {
             })
             return (
                 <div className="user-info-container">
-                    <h1>{name.title + " " + name.first + " " + name.last}</h1>
+                    <h1>{name.first + " " + name.last}</h1>
                     <h4>Ваши счета:</h4>
                     {accountItems}
                     <h4>Ваши карты:</h4>
@@ -47,7 +47,7 @@ class UserInfo extends React.Component {
             })
             return (
                 <div className="user-info-container">
-                    <h1>{name.title + " " + name.first + " " + name.last}</h1>
+                    <h1>{name.first + " " + name.last}</h1>
                     <h4>Ваши счета:</h4>
                     {accountItems}
                     <h4>У Вас нет карт</h4>
@@ -63,7 +63,7 @@ class UserInfo extends React.Component {
             })
             return (
                 <div className="user-info-container">
-                    <h1>{name.title + " " + name.first + " " + name.last}</h1>
+                    <h1>{name.first + " " + name.last}</h1>
                     <h4>У Вас нет счетов</h4>
                     <h4>Ваши карты:</h4>
                     {cardItems}
@@ -73,7 +73,7 @@ class UserInfo extends React.Component {
         else {
             return (
                 <div className="user-info-container">
-                    <h1>{name.title + " " + name.first + " " + name.last}</h1>
+                    <h1>{name.first + " " + name.last}</h1>
                     <h4>У Вас нет карт или счетов</h4>
                 </div>
             )
