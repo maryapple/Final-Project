@@ -12,8 +12,74 @@ class UserInfo extends React.Component {
 
     renderUser = () => {
         const { name, cards, accounts } = this.props.users
+        
+        if (accounts && cards) {
+            const accountItems = accounts.map(elem => {
+                return <Account
+                    number={elem.number}
+                    key={elem.id}
+                />
+            })
 
-        const accountItems = accounts.map(elem => {
+            const cardItems = cards.map(elem => {
+                return <Card
+                    number={elem.number}
+                    key={elem.id}
+                />
+            })
+            return (
+                <div className="user-info-container">
+                    <h1>{name.title + " " + name.first + " " + name.last}</h1>
+                    <h4>Ваши счета:</h4>
+                    {accountItems}
+                    <h4>Ваши карты:</h4>
+                    {cardItems}
+                </div>
+            )
+        }
+
+        else if (accounts && !cards) {
+            const accountItems = accounts.map(elem => {
+                return <Account
+                    number={elem.number}
+                    key={elem.id}
+                />
+            })
+            return (
+                <div className="user-info-container">
+                    <h1>{name.title + " " + name.first + " " + name.last}</h1>
+                    <h4>Ваши счета:</h4>
+                    {accountItems}
+                    <h4>У Вас нет карт</h4>
+                </div>
+            )
+        }
+        else if (!accounts && cards) {
+            const cardItems = cards.map(elem => {
+                return <Card
+                    number={elem.number}
+                    key={elem.id}
+                />
+            })
+            return (
+                <div className="user-info-container">
+                    <h1>{name.title + " " + name.first + " " + name.last}</h1>
+                    <h4>У Вас нет счетов</h4>
+                    <h4>Ваши карты:</h4>
+                    {cardItems}
+                </div>
+            )
+        }
+        else {
+            return (
+                <div className="user-info-container">
+                    <h1>{name.title + " " + name.first + " " + name.last}</h1>
+                    <h4>У Вас нет карт или счетов</h4>
+                </div>
+            )
+        }
+            
+        /* const accountItems = accounts.map(elem => {
             return <Account
                 number={elem.number}
                 key={elem.id}
@@ -35,7 +101,7 @@ class UserInfo extends React.Component {
                 <h4>Ваши карты:</h4>
                 {cardItems}
             </div>
-        )
+        ) */
     }
 
     render() {

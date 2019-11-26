@@ -88,15 +88,15 @@ class Register extends React.Component {
                             </div>
                             <div className="buttons">
                                 <button type="submit" disabled={submitting || pristine}>
-                                    Submit
-                        </button>
+                                    Отправить
+                                </button>
                                 <button
                                     type="button"
                                     onClick={form.reset}
                                     disabled={submitting || pristine}
                                 >
-                                    Reset
-                        </button>
+                                    Очистить
+                                </button>
                             </div>
 
                             {/* <pre>{JSON.stringify(values, 0, 2)}</pre> */}
