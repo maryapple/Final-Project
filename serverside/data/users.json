@@ -53,7 +53,6 @@
         },
         "email": "karl.lewis@example.com",
         "login": {
-            "uuid": "985fa8bf-1e89-436b-a5a1-0953f8ba7298",
             "username": "purplebutterfly141",
             "password": "fallon"
         },
@@ -64,8 +63,7 @@
         "phone": "(957)-641-5543",
         "picture": {
             "medium": "https://randomuser.me/api/portraits/med/men/24.jpg"
-        },
-        "nat": "IE"
+        }
     },
     {
         "id": "2",
@@ -106,7 +104,6 @@
         },
         "email": "zofia.moksnes@example.com",
         "login": {
-            "uuid": "f81d46b3-05f7-4894-9567-1b78b89e1559",
             "username": "lazybutterfly726",
             "password": "ginger"
         },
@@ -117,8 +114,7 @@
         "phone": "66903364",
         "picture": {
             "medium": "https://randomuser.me/api/portraits/med/women/71.jpg"
-        },
-        "nat": "NO"
+        }
     },
     {
         "id": "3",
@@ -140,7 +136,6 @@
         },
         "email": "siril.mogstad@example.com",
         "login": {
-            "uuid": "d8d62e14-05fd-4690-bc49-470243cbbb2f",
             "username": "organicfish527",
             "password": "dark"
         },
@@ -151,8 +146,7 @@
         "phone": "37777196",
         "picture": {
             "medium": "https://randomuser.me/api/portraits/med/women/24.jpg"
-        },
-        "nat": "NO"
+        }
     },
     {
         "id": "4",
@@ -174,7 +168,6 @@
         },
         "email": "arsh.khwty@example.com",
         "login": {
-            "uuid": "1ed76f8e-9cbd-47b5-b1a5-df0ddf70c9bd",
             "username": "redgoose841",
             "password": "attack"
         },
@@ -185,8 +178,7 @@
         "phone": "089-40867810",
         "picture": {
             "medium": "https://randomuser.me/api/portraits/med/men/81.jpg"
-        },
-        "nat": "IR"
+        }
     },
     {
         "id": "5",
@@ -208,7 +200,6 @@
         },
         "email": "marius.dufour@example.com",
         "login": {
-            "uuid": "a318ec53-4104-4c67-969f-79978c42abac",
             "username": "organiczebra540",
             "password": "gandalf1"
         },
@@ -219,8 +210,7 @@
         "phone": "078 216 76 73",
         "picture": {
             "medium": "https://randomuser.me/api/portraits/med/men/45.jpg"
-        },
-        "nat": "CH"
+        }
     },
     {
         "id": "6",
@@ -242,7 +232,6 @@
         },
         "email": "livia.olivier@example.com",
         "login": {
-            "uuid": "9c384d6e-e1a4-43c7-a70e-e3b985f6b48d",
             "username": "tinytiger295",
             "password": "1a2b3c"
         },
@@ -253,45 +242,14 @@
         "phone": "02-94-73-58-80",
         "picture": {
             "medium": "https://randomuser.me/api/portraits/med/women/48.jpg"
-        },
-        "nat": "FR"
+        }
     },
     {
-        "id": "7",
-        "name": {
-            "title": "AAAAAAAAAAAAAAAAA",
-            "first": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-            "last": "Jonas"
-        },
-        "email": "karl.lewis@example.com",
-        "gender": "male",
-        "location": {
-            "street": {
-                "number": 9872,
-                "name": "Preston Rd"
-            },
-            "city": "Mesquite",
-            "state": "Pennsylvania",
-            "country": "United States",
-            "postcode": 98641
-        },
-        "login": {
-            "uuid": "985fa8bf-1e89-436b-a5a1-0953f8ba7298",
-            "username": "purplebutterfly141",
-            "password": "fallon"
-        },
-        "registered": {
-            "date": "2008-06-24T12:34:51.325Z",
-            "age": 11
-        },
-        "phone": "(957)-641-5543",
-        "picture": {
-            "medium": "https://randomuser.me/api/portraits/med/men/24.jpg"
-        },
-        "nat": "IE"
-    },
-    {
-        "email": "exmpl@example.com",
-        "password": "$2a$10$Ef3QbjhlhqLkkUE/lVJRG.dSFAT.GAS.fLrYKtpDR1M9mdw1I6Zqi"
+        "id": null,
+        "email": "nana.nanana@example.com",
+        "gender": "female",
+        "name": {},
+        "password": "$2a$10$mc.3ICly279cCRePf65NW.M3Ybdz34JYA1ICy3IVA3y4GTkR39nRa",
+        "phone": "66903364"
     }
 ]

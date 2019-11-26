@@ -8,6 +8,7 @@ const users = fs.readFileSync(configPath)
 const data = JSON.parse(users)
 // console.log(data)
 const bcrypt = require('bcryptjs')
+const helper = require('../helpers/helpers-for-models')
 
 router.post('/login', (req, res) => {
     res.status(200).json({
@@ -36,8 +37,17 @@ router.post('/register', async (req, res) => {
         const salt = bcrypt.genSaltSync(10)
         const password = req.body.password
         const newUser = {
+            id: helper.getNewId(users),
             email: req.body.email,
-            password: bcrypt.hashSync(password, salt)
+            gender: req.body.gender,
+            name: {
+                title: req.body.title,
+                first: req.body.first,
+                last: req.body.last
+            },
+            password: bcrypt.hashSync(password, salt),
+            registered: helper.newDate(),
+            phone: req.body.phone
         }
 
         data.push(newUser)

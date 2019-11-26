@@ -64,6 +64,8 @@ function writeJSONFile(filename, content) {
     })
 }
 
+const newDate = () => { new Date().toISOString() }
+
 function randomNum(min, max) {
     var rand = min - 0.5 + Math.random() * (max - min + 1)
     return Math.round(rand)
@@ -75,5 +77,6 @@ module.exports = {
     generateName,
     generateEmail,
     writeJSONFile,
-    randomNum
+    randomNum,
+    newDate
 }
