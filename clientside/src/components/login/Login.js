@@ -3,93 +3,79 @@ import { render } from 'react-dom'
 import Styles from './Styles'
 import { Form, Field } from 'react-final-form'
 import { FORM_ERROR } from 'final-form'
+import { loginUser } from '../../actions/login'
+import {connect} from 'react-redux'
 
-const sleep = ms => new Promise(resolve => setTimeout(resolve, ms))
+// const sleep = ms => new Promise(resolve => setTimeout(resolve, ms))
 
-const onSubmit = async values => {
-    await sleep(300)
-    if (values.username !== 'erikras') {
-        return { username: 'Unknown username' }
+class LoginForm extends React.Component {
+    state = {
+        count: 0
     }
-    if (values.password !== 'finalformrocks') {
-        return { [FORM_ERROR]: 'Login Failed' }
+    onSubmit = values => {
+        this.setState({
+            count : this.state.count+1
+        })
+        // await sleep(300)
+        // console.log(values)
+        this.props.loginUser(values)
+        console.log(this.state.count)
     }
-    window.alert('LOGIN SUCCESS!')
-}
-
-const LoginForm = () => (
-    <Styles>
-        <h1>Log in</h1>
-        <a
-            href="https://final-form.org/react"
-            target="_blank"
-            rel="noopener noreferrer"
-        >
-            Еще не зарегистированы?
-        </a>
-        <div>
-            Only successful credentials are <code>erikras</code> and{' '}
-            <code>finalformrocks</code>.
-    </div>
-        <Form
-            onSubmit={onSubmit}
-            validate={values => {
-                const errors = {}
-                if (!values.username) {
-                    errors.username = 'Required'
-                }
-                if (!values.password) {
-                    errors.password = 'Required'
-                }
-                return errors
-            }}
-            render={({
-                submitError,
-                handleSubmit,
-                form,
-                submitting,
-                pristine,
-                values
-            }) => (
+    render() {
+        return (
+            <Styles>
+            <h1>LOGIN</h1>
+            <Form
+                onSubmit={this.onSubmit}
+                render={({ handleSubmit, form, submitting, pristine, values }) => (
                     <form onSubmit={handleSubmit}>
-                        <Field name="username">
-                            {({ input, meta }) => (
-                                <div>
-                                    <label>Username</label>
-                                    <input {...input} type="text" placeholder="Username" />
-                                    {(meta.error || meta.submitError) && meta.touched && (
-                                        <span>{meta.error || meta.submitError}</span>
-                                    )}
-                                </div>
-                            )}
-                        </Field>
-                        <Field name="password">
-                            {({ input, meta }) => (
-                                <div>
-                                    <label>Password</label>
-                                    <input {...input} type="password" placeholder="Password" />
-                                    {meta.error && meta.touched && <span>{meta.error}</span>}
-                                </div>
-                            )}
-                        </Field>
-                        {submitError && <div className="error">{submitError}</div>}
+                        
+                        <div>
+                            <label>Логин</label>
+                            <Field
+                                name="email"
+                                component="input"
+                                type="text"
+                                placeholder="Логин"
+                            />
+                        </div>
+                        <div>
+                            <label>Пароль</label>
+                            <Field
+                                name="password"
+                                component="input"
+                                type="text"
+                                placeholder="Пароль"
+                            />
+                        </div>
+                        
                         <div className="buttons">
-                            <button type="submit" disabled={submitting}>
-                                Log In
-            </button>
+                            <button type="submit" disabled={submitting || pristine}>
+                                Войти
+                        </button>
                             <button
                                 type="button"
                                 onClick={form.reset}
                                 disabled={submitting || pristine}
                             >
-                                Reset
-            </button>
+                                Очистить
+                        </button>
                         </div>
-                        <pre>{JSON.stringify(values, 0, 2)}</pre>
+
+                        {/* <pre>{JSON.stringify(values, 0, 2)}</pre> */}
                     </form>
                 )}
-        />
-    </Styles>
-)
+            />
+            </Styles >
+            
+        )
+    }
+}
 
-export default LoginForm
+const mapDispatchToProps = (dispatch) => {
+    return {
+        loginUser: (user) => dispatch(loginUser(user))
+    }
+}
+
+export default connect(null, mapDispatchToProps)(LoginForm) 

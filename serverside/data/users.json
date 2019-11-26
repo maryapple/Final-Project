@@ -287,5 +287,43 @@
         },
         "password": "$2a$10$obYOvJ1wX0NJ7cDWheZTr.XG/HALcZ5Eyri8LMK/7bfqAN0X/RrSm",
         "phone": "66903364"
+    },
+    {
+        "id": 12
+    },
+    {
+        "id": 13,
+        "email": "poopoiy@example.com",
+        "gender": "female",
+        "password": "$2a$10$VxHhIjGuAK7eeQaqfcdRT.RsCOvs6fAD5AITPutHORFQCM84GdyHu",
+        "phone": "66903364"
+    },
+    {
+        "id": 14,
+        "email": "ggg@gmail.com",
+        "gender": "oio;i",
+        "password": "$2a$10$uoyjnFfW.Wd2l8.nmiGcfeSKrPK5aXbBKjXRIaVa3DpH/jLcS6z46",
+        "phone": "uiyyk"
+    },
+    {
+        "id": 15,
+        "email": "ggg@gmail.com1",
+        "gender": "oio;i",
+        "password": "$2a$10$h55QwWh3ujUusZE7cJU9Fu2nn1aBLENx76AtgiJ.a.g90r6uJO6S6",
+        "phone": "uiyyk"
+    },
+    {
+        "id": 16,
+        "email": "mdkurysheva@edu.hse.ru",
+        "gender": "uuu",
+        "password": "$2a$10$z6MAHaSLVSTQMaJYxj21quPYYhbj2bc84WFAwBNegerBeuJ2zUM7e",
+        "phone": "+7 (909) 163-30-65"
+    },
+    {
+        "id": 17,
+        "email": "mdkur@edu.hse.ru",
+        "gender": "uuu",
+        "password": "$2a$10$YgI7zL8tTO7Y6JXud79phOzOEkj/KWB0.Ul.rxOA1rOWE3nPfcQLq",
+        "phone": "+7 (909) 163-30-65"
     }
 ]

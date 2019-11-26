@@ -5,6 +5,7 @@ import MainPage from '../../pages/main'
 import BalancePage from '../../pages/balance'
 import CurrenciesPage from '../../pages/currencies'
 import AuthPage from '../../pages/auth'
+import RegisterPage from '../../pages/register'
 
 export default class App extends Component {
 	render() {
@@ -14,6 +15,10 @@ export default class App extends Component {
 						<Route
 							path="/login"
 							component={AuthPage}
+						/>
+						<Route
+							path="/register"
+							component={RegisterPage}
 						/>
 						<Route
 							path="/"
