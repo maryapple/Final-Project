@@ -16,3 +16,10 @@ html body {
     flex-direction: column;
     width: 100%;
 }
+
+.auth-container {
+    margin-top: 5rem;
+    /* display: flex; */
+    /* flex-direction: column; */
+    /* width: 100%; */
+}
