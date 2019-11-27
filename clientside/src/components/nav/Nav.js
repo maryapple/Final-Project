@@ -1,8 +1,16 @@
 import React from 'react'
 import './Nav.css'
 import { Link } from 'react-router-dom'
+import { connect } from 'react-redux'
+import { logoutUser } from '../../actions/login'
 
-const Nav = () => {
+const Nav = (props) => {
+
+    const logoutUser = () => {
+        localStorage.removeItem("token")
+        props.logoutUser()
+    }
+
     return (
         <div className="sidebar-container">
             <nav className="sidebar">
@@ -25,10 +33,21 @@ const Nav = () => {
                             <i className="fas fa-cog fa-3x"></i>
                         </Link>
                     </li>
+                    <li>
+                        <Link to="/login" onClick={logoutUser}>
+                            <p>LOGOUT</p>
+                        </Link>
+                    </li>
                 </ul>
             </nav>
         </div>
     )
 }
 
-export default Nav
+const mapDispatchToProps = (dispatch) => {
+    return {
+        logoutUser: () => dispatch(logoutUser())
+    }
+}
+
+export default connect(null, mapDispatchToProps)(Nav)

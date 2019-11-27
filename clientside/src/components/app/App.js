@@ -6,9 +6,15 @@ import BalancePage from '../../pages/balance'
 import CurrenciesPage from '../../pages/currencies'
 import LoginPage from '../../pages/login'
 import RegisterPage from '../../pages/register'
+import {connect} from 'react-redux'
+import {getProfileFetch, logoutUser} from '../../actions/login'
 
-export default class App extends Component {
+class App extends Component {
+	componentDidMount() {
+		this.props.getProfileFetch()
+	}
 	render() {
+		// console.log("currentUser", currentUser)
 		return (
 			<BrowserRouter>
 				<Switch>
@@ -33,8 +39,24 @@ export default class App extends Component {
 						path="/currencies"
 						component={CurrenciesPage}
 					/>
+					{/* {this.props.currentUser.name.first
+						? <button onClick={this.handleClick}>Log Out</button>
+						: null
+					} */}
 				</Switch>
+				
 			</BrowserRouter>
 		)
 	}
 }
+
+const mapStateToProps = state => ({
+	currentUser: state.login.currentUser
+})
+
+const mapDispatchToProps = dispatch => ({
+	getProfileFetch: () => dispatch(getProfileFetch()),
+	logoutUser: () => dispatch(logoutUser())
+})
+
+export default connect(mapStateToProps, mapDispatchToProps)(App)

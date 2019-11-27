@@ -2,17 +2,20 @@ import React from 'react'
 // import { render } from 'react-dom'
 import Styles from './Styles'
 import { Form, Field } from 'react-final-form'
-// import { FORM_ERROR } from 'final-form'
 import { loginUser } from '../../actions/login'
 import {connect} from 'react-redux'
-
-// const sleep = ms => new Promise(resolve => setTimeout(resolve, ms))
+import { Redirect } from 'react-router-dom'
 
 class LoginForm extends React.Component {
     onSubmit = values => {
-        // await sleep(300)
         this.props.loginUser(values)
+        if ((!this.props.error) && (localStorage.getItem('token'))) {
+            console.log(this.props.error)
+            return (<Redirect to="/" />)
+        }
+        console.log(localStorage.token)
     }
+
     render() {
         return (
             <Styles>
@@ -43,7 +46,7 @@ class LoginForm extends React.Component {
                         <div className="buttons">
                             <button type="submit" disabled={submitting || pristine}>
                                 Войти
-                        </button>
+                            </button>
                             <button
                                 type="button"
                                 onClick={form.reset}
@@ -60,10 +63,16 @@ class LoginForm extends React.Component {
     }
 }
 
+const mapStateToProps = (state) => {
+    return {
+        error: state.login.error
+    }
+}
+
 const mapDispatchToProps = (dispatch) => {
     return {
         loginUser: (user) => dispatch(loginUser(user))
     }
 }
 
-export default connect(null, mapDispatchToProps)(LoginForm) 
+export default connect(mapStateToProps, mapDispatchToProps)(LoginForm) 

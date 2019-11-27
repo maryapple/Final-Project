@@ -7,7 +7,17 @@ import Account from './Account'
 
 class UserInfo extends React.Component {
     componentDidMount() {
-        this.props.setUserData(1)
+        console.log(this.props)
+/*         if (this.props.currentUser !== {}) {
+            this.props.setUserData(this.props.currentUser.id)
+        } */
+        
+    }
+
+    componentDidUpdate (prev) {
+        if (prev.currentUser !== this.props.currentUser) {
+            this.props.setUserData(this.props.currentUser.id)
+        }
     }
 
     renderUser = () => {
@@ -115,7 +125,8 @@ class UserInfo extends React.Component {
 const mapStateToProps = (store) => {
     return {
         users: store.userInfo.data,
-        loading: store.userInfo.isLoading
+        loading: store.userInfo.isLoading,
+        currentUser: store.login.currentUser
     }
 }
 
