@@ -1,6 +1,5 @@
-/* eslint-disable jsx-a11y/accessible-emoji */
 import React from 'react'
-import { render } from 'react-dom'
+// import { render } from 'react-dom'
 import Styles from './Styles'
 import { Form, Field } from 'react-final-form'
 import { registerUser } from '../../actions/register'
@@ -12,7 +11,7 @@ class Register extends React.Component {
     onSubmit = values => {
         // await sleep(300)
         // window.alert(JSON.stringify(values, 0, 2))
-        console.log(values)
+        // console.log(values)
         this.props.registerUser(values)
     }
     render () {

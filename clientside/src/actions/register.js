@@ -12,10 +12,10 @@ export const registerUser = user => {
             .then(resp => resp.json())
             .then(data => {
                 if (data.message) {
-                    console.log(data, 'owibka')
+                    console.log(data, 'ОШИБКА')
                     //Тут прописываем логику
                 } else {
-                    console.log('else', data)
+                    // console.log('else', data)
                     // dispatch(loginUser(data.user))
                 }
             })

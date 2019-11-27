@@ -13,7 +13,7 @@ const jwt = require('jsonwebtoken')
 const keys = require('../config/keys')
 
 router.post('/login', async (req, res) => {
-    console.log('req body login', req.body.user)
+    console.log('------------------req body from login', req.body.user)
     const candidate = await data.find((user) => {
         if (user.email === req.body.user.email) {
             return 1
@@ -21,7 +21,7 @@ router.post('/login', async (req, res) => {
         return 0
     })
     if (candidate) {
-        console.log('candidate', candidate)
+        console.log('------------candidate', candidate)
         const passwordResult = bcrypt.compareSync(req.body.user.password, candidate.password)
         if (passwordResult) {
             const token = jwt.sign({
@@ -51,7 +51,6 @@ router.post('/login', async (req, res) => {
 })
 
 router.post('/register', async (req, res) => {
-    // console.log('!!!!!!!!!!!!!!!!!!!',req.body.user)
     const candidate = await data.find( (user) => 
         {
             if (user.email === req.body.user.email) {
@@ -66,7 +65,6 @@ router.post('/register', async (req, res) => {
         })
     }
     else {
-        // console.log("BODY", req.body)
         const salt = bcrypt.genSaltSync(10)
         const password = req.body.user.password
         const newUser = {
@@ -80,8 +78,6 @@ router.post('/register', async (req, res) => {
             registered: helper.newDate(),
             phone: req.body.user.phone
         }
-        console.log(helper.newDate())
-        console.log(newUser)
         data.push(newUser)
 
         fs.writeFile(configPath, JSON.stringify(data), (error) => {

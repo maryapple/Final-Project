@@ -1,5 +1,5 @@
 export const loginUser = user => {
-    console.log('USER', user)
+    console.log('USER action', user)
     // const token = localStorage.token
     return dispatch => {
         return fetch("/api/auth/login", {
@@ -13,10 +13,9 @@ export const loginUser = user => {
             .then(resp => resp.json())
             .then(data => {
                 if (data.message) {
-                    console.log(data, 'owibka')
-                    //Тут прописываем логику
+                    console.log('----action ERROR------', data)
                 } else {
-                    console.log('login data', data)
+                    console.log('-------------action data--------------', data)
                     // localStorage.setItem("token", data)
                     dispatch(loginUser(data.user))
                 }

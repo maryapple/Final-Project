@@ -1,25 +1,17 @@
 import React from 'react'
-import { render } from 'react-dom'
+// import { render } from 'react-dom'
 import Styles from './Styles'
 import { Form, Field } from 'react-final-form'
-import { FORM_ERROR } from 'final-form'
+// import { FORM_ERROR } from 'final-form'
 import { loginUser } from '../../actions/login'
 import {connect} from 'react-redux'
 
 // const sleep = ms => new Promise(resolve => setTimeout(resolve, ms))
 
 class LoginForm extends React.Component {
-    state = {
-        count: 0
-    }
     onSubmit = values => {
-        this.setState({
-            count : this.state.count+1
-        })
         // await sleep(300)
-        // console.log(values)
         this.props.loginUser(values)
-        console.log(this.state.count)
     }
     render() {
         return (
@@ -29,7 +21,6 @@ class LoginForm extends React.Component {
                 onSubmit={this.onSubmit}
                 render={({ handleSubmit, form, submitting, pristine, values }) => (
                     <form onSubmit={handleSubmit}>
-                        
                         <div>
                             <label>Логин</label>
                             <Field
@@ -61,13 +52,10 @@ class LoginForm extends React.Component {
                                 Очистить
                         </button>
                         </div>
-
-                        {/* <pre>{JSON.stringify(values, 0, 2)}</pre> */}
                     </form>
                 )}
             />
             </Styles >
-            
         )
     }
 }
