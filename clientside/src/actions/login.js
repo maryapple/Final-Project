@@ -1,3 +1,5 @@
+const LOGIN_USER = 'LOGIN_USER'
+
 export const loginUser = user => {
     console.log('USER action', user)
     // const token = localStorage.token
@@ -14,10 +16,14 @@ export const loginUser = user => {
             .then(data => {
                 if (data.message) {
                     console.log('----action ERROR------', data)
-                } else {
+                } 
+                else {
                     console.log('-------------action data--------------', data)
-                    // localStorage.setItem("token", data)
-                    dispatch(loginUser(data.user))
+                    localStorage.setItem("token", data.token)
+                    dispatch({
+                        type: LOGIN_USER,
+                        payload: data.user
+                    })
                 }
             })
     }

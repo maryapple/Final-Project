@@ -13,7 +13,6 @@ const jwt = require('jsonwebtoken')
 const keys = require('../config/keys')
 
 router.post('/login', async (req, res) => {
-    console.log('------------------req body from login', req.body.user)
     const candidate = await data.find((user) => {
         if (user.email === req.body.user.email) {
             return 1
@@ -26,14 +25,15 @@ router.post('/login', async (req, res) => {
         if (passwordResult) {
             const token = jwt.sign({
                 email: candidate.email,
-                userId: candidate.userId
-                /* name: {
+                userId: candidate.userId,
+                name: {
                     first: candidate.name.first,
                     last: candidate.name.last
-                } */
+                }
             }, keys.jwt, {expiresIn: 60 * 15})
 
             res.status(200).json({
+                user: candidate,
                 token: `Bearer ${token}`
             })
         }

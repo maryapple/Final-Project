@@ -1,3 +1,5 @@
+const LOGIN_USER = 'LOGIN_USER'
+
 export const registerUser = user => {
     console.log(user)
     return dispatch => {
@@ -13,10 +15,13 @@ export const registerUser = user => {
             .then(data => {
                 if (data.message) {
                     console.log(data, 'ОШИБКА')
-                    //Тут прописываем логику
                 } else {
-                    // console.log('else', data)
-                    // dispatch(loginUser(data.user))
+                    console.log('все ок, data:', data)
+                    localStorage.setItem("token", data.jwt)
+                    dispatch({
+                        type: LOGIN_USER,
+                        payload: data.user
+                    })
                 }
             })
     }
