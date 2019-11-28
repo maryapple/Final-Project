@@ -8,7 +8,11 @@ const CardItem = (props) => {
 
     const handleClick = () => {
         console.log(props.user.id)
-        addCard(props.user.id)
+        const obj = {
+            "name": name
+        }
+        console.log(obj)
+        addCard(props.user.id, obj)
     }
 
     return (
@@ -32,7 +36,7 @@ const mapStateToProps = (store) => {
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        addCard: (userId) => dispatch(addCard(userId))
+        addCard: (userId, obj) => dispatch(addCard(userId, obj))
     }
 }
 
