@@ -1,9 +1,8 @@
 .sidebar-container {
     display: flex;
     width: 10rem;
-    /* flex-grow: 1; */
     background: rgb(29, 29, 31);
-    height: 50rem;
+    height: 100vh;
 }
 
 .sidebar {

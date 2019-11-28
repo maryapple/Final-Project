@@ -4,7 +4,7 @@ import Styles from './Styles'
 import { Form, Field } from 'react-final-form'
 import { loginUser } from '../../actions/login'
 import {connect} from 'react-redux'
-import { Redirect } from 'react-router-dom'
+import { Redirect, Link } from 'react-router-dom'
 
 class LoginForm extends React.Component {
     onSubmit = values => {
@@ -21,6 +21,11 @@ class LoginForm extends React.Component {
         return (localStorage.getItem('token')) ? <Redirect to="/" /> : (
             <Styles>
             <h1>LOGIN</h1>
+            <Link to="/register">
+                <p>
+                    Еще не зарегистированы?
+                </p>
+            </Link>
             <Form
                 onSubmit={this.onSubmit}
                 render={({ handleSubmit, form, submitting, pristine, values }) => (
