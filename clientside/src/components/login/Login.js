@@ -9,15 +9,16 @@ import { Redirect } from 'react-router-dom'
 class LoginForm extends React.Component {
     onSubmit = values => {
         this.props.loginUser(values)
-        if ((!this.props.error) && (localStorage.getItem('token'))) {
+        console.log("---------PROPS", this.props)
+        /* if ((!this.props.error) && (localStorage.getItem('token'))) {
             console.log(this.props.error)
             return (<Redirect to="/" />)
         }
-        console.log(localStorage.token)
+        console.log(localStorage.token) */
     }
 
     render() {
-        return (
+        return (localStorage.getItem('token')) ? <Redirect to="/" /> : (
             <Styles>
             <h1>LOGIN</h1>
             <Form
@@ -65,7 +66,8 @@ class LoginForm extends React.Component {
 
 const mapStateToProps = (state) => {
     return {
-        error: state.login.error
+        error: state.login.error,
+        loggedIn: state.login.loggedIn
     }
 }
 
