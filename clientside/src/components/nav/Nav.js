@@ -35,7 +35,7 @@ const Nav = (props) => {
                     </li>
                     <li>
                         <Link to="/login" onClick={logoutUser}>
-                            <p>LOGOUT</p>
+                            <i class="fas fa-sign-out-alt fa-3x"></i>
                         </Link>
                     </li>
                 </ul>
