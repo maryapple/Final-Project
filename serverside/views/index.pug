@@ -1,0 +1,13 @@
+extends layout/main
+
+block variables
+    - var pageTitle = 'My Title'
+
+block content
+    h1.title The Mini Bank API starter page
+    #container.col
+        h2.
+            Check the available paths
+        ol
+            each val in ['/api/users', '/api/cards', '/api/accounts']
+                li= val
