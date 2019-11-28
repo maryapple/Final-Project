@@ -10,9 +10,9 @@ const Profile = (props) => {
         <div className="profile-container">
             <h1>Личная информация</h1>
             <h2>{name.first} {name.last}</h2>
-            <div><span class="topic-info">Ваш телефон:</span> {phone}</div>
-            <div><span class="topic-info">Ваша почта:</span> {email}</div>
-            <div><span class="topic-info">Дата регистрации:</span>{registered.slice(0, 10)}</div>
+            <div><span className="topic-info">Ваш телефон:</span> {phone}</div>
+            <div><span className="topic-info">Ваша почта:</span> {email}</div>
+            <div><span className="topic-info">Дата регистрации:</span>{registered.slice(0, 10)}</div>
         </div>
     )
 }

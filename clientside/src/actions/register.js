@@ -1,7 +1,7 @@
-const LOGIN_USER = 'LOGIN_USER'
+const REGISTER_USER = 'REGISTER_USER'
 
 export const registerUser = user => {
-    console.log(user)
+    console.log("action register, user:", user)
     return dispatch => {
         return fetch("/api/auth/register", {
             method: "POST",
@@ -15,11 +15,12 @@ export const registerUser = user => {
             .then(data => {
                 if (data.message) {
                     console.log(data, 'ОШИБКА')
-                } else {
+                } 
+                else {
                     console.log('все ок, data:', data)
-                    localStorage.setItem("token", data.jwt)
+                    // localStorage.setItem("token", data.jwt)
                     dispatch({
-                        type: LOGIN_USER,
+                        type: REGISTER_USER,
                         payload: data.user
                     })
                 }

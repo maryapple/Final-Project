@@ -4,6 +4,7 @@ import Styles from './Styles'
 import { Form, Field } from 'react-final-form'
 import { registerUser } from '../../actions/register'
 import { connect } from 'react-redux'
+import { Redirect } from 'react-router-dom'
 
 // const sleep = ms => new Promise(resolve => setTimeout(resolve, ms))
 
@@ -12,9 +13,10 @@ class Register extends React.Component {
         // await sleep(300)
         // console.log(values)
         this.props.registerUser(values)
+        console.log("register props", this.props)
     }
     render () {
-        return (
+        return (this.props.registered && localStorage.token === undefined) ? <Redirect to="/login" /> : (
             <Styles>
                 <h1>Регистрация</h1>
                 <Form
@@ -86,10 +88,17 @@ class Register extends React.Component {
     }
 }
 
+const mapStateToProps = (state) => {
+    return {
+        loggedIn: state.login.loggedIn,
+        registered: state.login.registered
+    }
+}
+
 const mapDispatchToProps = (dispatch) => {
     return {
         registerUser: (user) => dispatch(registerUser(user))
     }
 }
 
-export default connect(null, mapDispatchToProps)(Register) 
+export default connect(mapStateToProps, mapDispatchToProps)(Register) 
