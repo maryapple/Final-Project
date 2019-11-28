@@ -1,4 +1,4 @@
-module.exports = [
+[
     {
         "name": "Classic",
         "type": "debit",
@@ -25,13 +25,6 @@ module.exports = [
         "type": "debit",
         "cashback": "3%",
         "cost of service per year, rub": "500",
-        "payment system": ["visa", "mastercard", "мир"]
-    },
-    {
-        "name": "Aerolines Card",
-        "type": ["debit", "credit"],
-        "cashback": "1%",
-        "cost of service per year, rub": "1000",
         "payment system": ["visa", "mastercard", "мир"]
     }
 ]

@@ -9,6 +9,7 @@ import RegisterPage from '../../pages/register'
 import {connect} from 'react-redux'
 import {getProfileFetch, logoutUser} from '../../actions/login'
 import ProfilePage from '../../pages/profile'
+import NewCardPage from '../../pages/new-card'
 
 class App extends Component {
 	componentDidMount() {
@@ -43,6 +44,10 @@ class App extends Component {
 					<Route
 						path="/my-profile"
 						component={ProfilePage} 
+					/>
+					<Route
+						path="/new-card"
+						component={NewCardPage}
 					/>
 				</Switch>
 				
