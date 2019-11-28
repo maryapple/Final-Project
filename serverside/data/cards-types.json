@@ -1,30 +1,34 @@
 [
     {
+        "image": "https://images-eu.ssl-images-amazon.com/images/I/413ZODqOVZL.jpg",
         "name": "Classic",
         "type": "debit",
         "cashback": "3%",
-        "cost of service per year, rub": "700",
-        "payment system": ["visa", "mastercard", "мир"]
+        "cost": "700",
+        "system": "mastercard"
     },
     {
+        "image": "https://www.rbcroyalbank.com/business/credit-cards/_assets-custom/images/cards/business-cashback-card.png",
         "name": "Super Cashback",
         "type": "debit",
         "cashback": "20%",
-        "cost of service per year, rub": "700",
-        "payment system": ["visa", "mastercard", "мир"]
+        "cost": "700",
+        "system": "mastercard"
     },
     {
+        "image": "https://cis.visa.com/dam/VCOM/regional/ap/taiwan/global-elements/images/xtw-visa-gold-card-498x280.png.pagespeed.ic.wMgkAeynp8.png",
         "name": "Visa Gold",
         "type": "debit",
         "cashback": "5%",
-        "cost of service per year, rub": "3000",
-        "payment system": "visa"
+        "cost": "3000",
+        "system": "visa"
     },
     {
+        "image": "https://www.otpbank.hu/static/portal/sw/pic/MC_Junior_41.png",
         "name": "Junior",
         "type": "debit",
         "cashback": "3%",
-        "cost of service per year, rub": "500",
-        "payment system": ["visa", "mastercard", "мир"]
+        "cost": "500",
+        "system": "мир"
     }
 ]

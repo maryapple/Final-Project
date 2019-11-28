@@ -5,7 +5,7 @@ import { accountInfoReducer} from './account-info'
 import { currencyRateReducer } from './currencies'
 import { updateInputReducer } from './update-input'
 import { loginReducer} from './login'
-// import { authReducer } from './auth'
+import { cardTypeReducer } from './getcardtypes'
 
 export default combineReducers({
     userInfo: userInfoReducer,
@@ -13,5 +13,6 @@ export default combineReducers({
     accountInfo: accountInfoReducer,
     currencyInfo: currencyRateReducer,
     updateInput: updateInputReducer,
-    login: loginReducer
+    login: loginReducer,
+    cardTypes: cardTypeReducer
 })

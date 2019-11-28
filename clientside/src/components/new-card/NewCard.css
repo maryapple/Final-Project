@@ -3,3 +3,22 @@
     margin: 1.5rem auto;
     font-size: 1.1rem;
 }
+
+.cards-grid {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.card-element {
+    width: 30vw;
+    margin: 1rem 0 2rem 0;
+    text-align: center;
+    padding: 1rem;
+}
+
+.card-element:hover {
+    /* border: 3px solid red; */
+    opacity: 0.8;
+    background: grey;
+}
