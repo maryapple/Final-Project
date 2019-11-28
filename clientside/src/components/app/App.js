@@ -8,6 +8,7 @@ import LoginPage from '../../pages/login'
 import RegisterPage from '../../pages/register'
 import {connect} from 'react-redux'
 import {getProfileFetch, logoutUser} from '../../actions/login'
+import ProfilePage from '../../pages/profile'
 
 class App extends Component {
 	componentDidMount() {
@@ -39,10 +40,10 @@ class App extends Component {
 						path="/currencies"
 						component={CurrenciesPage}
 					/>
-					{/* {this.props.currentUser.name.first
-						? <button onClick={this.handleClick}>Log Out</button>
-						: null
-					} */}
+					<Route
+						path="/my-account"
+						component={ProfilePage} 
+					/>
 				</Switch>
 				
 			</BrowserRouter>
