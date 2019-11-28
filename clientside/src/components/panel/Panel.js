@@ -10,11 +10,11 @@ const Panel = () => {
                     Баланс
                 </button>
             </Link>
-            <Link to='/transfers-payments'>
+            {/* <Link to='/transfers-payments'>
                 <button type="button" className="btn btn-secondary">
                     Переводы и платежи
                 </button>
-            </Link>
+            </Link> */}
             <Link to='/currencies'>
                 <button type="button" className="btn btn-secondary">
                     Курсы валют
@@ -30,11 +30,11 @@ const Panel = () => {
                     Новый счет
                 </button>
             </Link>
-            <Link to="/loan">
+            {/* <Link to="/loan">
                 <button type="button" className="btn btn-secondary">
                     Взять кредит
                 </button>
-            </Link>
+            </Link> */}
         </div>
     )
 }

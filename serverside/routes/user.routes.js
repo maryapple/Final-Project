@@ -2,6 +2,13 @@ const express = require('express')
 const router = express.Router()
 const user = require('../models/user.model')
 const m = require('../middlewares/middlewares-routes')
+const helper = require('../helpers/helpers-for-models')
+const filename = '../data/users.json'
+const path = require('path')
+const configPath = path.join(__dirname, filename)
+const fs = require('fs')
+const users = fs.readFileSync(configPath)
+const data = JSON.parse(users)
 
 // Routes
 module.exports = router
@@ -63,8 +70,9 @@ router.post('/', m.checkFieldsUser, async (req, res) => {
         .catch(err => res.status(500).json({ message: err.message }))
 })
 
-router.put('/:id', m.mustBeInteger, m.checkFieldsUser, async (req, res) => {
+/* router.put('/:id', m.mustBeInteger, m.checkFieldsUser, async (req, res) => {
     const id = req.params.id
+    console.log("#######", req.body)
     await user.updateUser(id, req.body)
         .then(user => res.json({
             message: `The user #${id} has been updated`,
@@ -76,4 +84,40 @@ router.put('/:id', m.mustBeInteger, m.checkFieldsUser, async (req, res) => {
             }
             res.status(500).json({ message: err.message })
         })
+}) */
+
+router.patch('/:id', async (req, res) => {
+    await data.find( (user) => {
+        if (user.id === req.params.id) {
+            if (user.cards === undefined) {
+                user.cards = []
+                let obj = {
+                    id: "123",
+                    number: "000000000000",
+                    until: "01-01-2020",
+                    balance: "0.00",
+                    type: req.body.name,
+                    registered: helper.newDate()
+                }
+                user.cards.push(obj)
+            }
+            else {
+                let obj = {
+                    id: "123",
+                    number: "000000000000",
+                    until: "01-01-2020",
+                    balance: "0.00",
+                    type: req.body.name,
+                    registered: helper.newDate()
+                }
+                user.cards.push(obj)
+            }
+        }
+    })
+    fs.writeFile(configPath, JSON.stringify(data), (error) => {
+        if (error) {
+            return res.json({ message: error })
+        }
+    })
+    return res.status(200)
 })

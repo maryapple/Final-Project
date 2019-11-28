@@ -13,7 +13,7 @@ export const cardTypeReducer = (state = initialState, action) => {
             return { ...state, isLoading: true }
 
         case GET_CARDTYPE_SUCCESS:
-            console.log("-------action payload card types", action.payload)
+            // console.log("-------action payload card types", action.payload)
             return { ...state, isLoading: false, data: action.payload}
 
         case GET_CARDTYPE_FAIL:

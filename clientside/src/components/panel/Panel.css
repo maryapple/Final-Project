@@ -2,32 +2,15 @@
     width: 80%;
     display: flex;
     margin: 1.5rem auto;
-    /* flex-grow: 1; */
-    height: 30%;
+    height: 20vh;
     flex-wrap: wrap;
     justify-content: center;
-}
-
-/* button {
-    font-size: 2rem !important;
-    width: 31%;
-    margin: 1.1%;
-    height: 6rem;
-} */
-
-.panel-container Link {
-    border-radius: 0;
-    font-size: 2rem !important;
-    width: 31%;
-    margin: 1.1%;
-    height: 6rem;
-    vertical-align: middle;
 }
 
 .panel-container a {
     border-radius: 0;
     font-size: 2rem !important;
-    width: 31%;
+    width: 20%;
     margin: 1.1%;
     height: 6rem;
     vertical-align: middle;

@@ -14,9 +14,9 @@ function mustBeInteger(req, res, next) {
 
 // for POST, UPDATE
 function checkFieldsUser(req, res, next) {
-    const { id, name, email } = req.body
-    console.log(req.body)
-    if (id && name && email) {
+    const { id, email } = req.body
+    console.log("###----", req.body)
+    if (id && email) {
         next()
     } 
     else {
