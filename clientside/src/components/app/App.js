@@ -41,7 +41,7 @@ class App extends Component {
 						component={CurrenciesPage}
 					/>
 					<Route
-						path="/my-account"
+						path="/my-profile"
 						component={ProfilePage} 
 					/>
 				</Switch>

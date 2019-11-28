@@ -24,7 +24,7 @@ const Nav = (props) => {
                         </Link>
                     </li>
                     <li>
-                        <Link to="/my-account">
+                        <Link to="/my-profile">
                             <i className="fas fa-user fa-3x"></i>
                         </Link>
                     </li>
