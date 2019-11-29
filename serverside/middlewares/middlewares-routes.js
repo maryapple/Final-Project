@@ -3,7 +3,6 @@
 // if the id is an integer, for  GET UPDATE DELETE
 function mustBeInteger(req, res, next) {
     const id = req.params.id
-    console.log('middwrs-routes.js')
     if (!Number.isInteger(parseInt(id))) {
         res.status(400).json({ message: 'ID must be an integer' })
     } 
@@ -15,7 +14,6 @@ function mustBeInteger(req, res, next) {
 // for POST, UPDATE
 function checkFieldsUser(req, res, next) {
     const { id, email } = req.body
-    console.log("###----", req.body)
     if (id && email) {
         next()
     } 

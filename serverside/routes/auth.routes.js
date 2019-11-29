@@ -13,7 +13,7 @@ const jwt = require('jsonwebtoken')
 const keys = require('../config/keys')
 
 router.post('/login', async (req, res) => {
-    console.log("---------------------", req.body)
+    // console.log("---------------------", req.body)
     const candidate = await data.find((user) => {
         if (user.email === req.body.user.email) {
             return 1
@@ -21,7 +21,7 @@ router.post('/login', async (req, res) => {
         return 0
     })
     if (candidate) {
-        console.log('------------candidate', candidate)
+        // console.log('------------candidate', candidate)
         const passwordResult = bcrypt.compareSync(req.body.user.password, candidate.password)
         if (passwordResult) {
             const token = jwt.sign({

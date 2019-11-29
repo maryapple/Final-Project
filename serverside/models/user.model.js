@@ -7,7 +7,6 @@ const helper = require('../helpers/helpers-for-models')
 // GET all users
 function getUsers() {
     return new Promise((resolve, reject) => {
-        // console.log(users)
         if (users.length === 0) {
             reject({
                 message: 'no users available',
@@ -20,7 +19,6 @@ function getUsers() {
 
 // GET particular user
 function getUser(id) {
-    console.log('user.model.js getUser')
     return new Promise((resolve, reject) => {
         helper.mustBeInArray(users, id)
             .then(user => resolve(user))
@@ -30,11 +28,9 @@ function getUser(id) {
 
 // DELETE user
 function deleteUser(id) {
-    console.log('user.model.js deleteUser')
     return new Promise((resolve, reject) => {
         helper.mustBeInArray(users, id)
             .then( () => {
-                // добавить новую переменную
                 users = users.filter(u => u.id !== id)
                 helper.writeJSONFile(configPath, users)
                 resolve()

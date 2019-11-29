@@ -17,22 +17,6 @@
                 "registered": "01-01-2010",
                 "balance": "10000.00",
                 "type": "Visa Gold"
-            },
-            {
-                "id": "123",
-                "number": "000000000000",
-                "until": "01-01-2020",
-                "balance": "0.00",
-                "type": "Classic",
-                "registered": "2019-11-28T20:09:52.660Z"
-            },
-            {
-                "id": "123",
-                "number": "000000000000",
-                "until": "01-01-2020",
-                "balance": "0.00",
-                "type": "Classic",
-                "registered": "2019-11-28T20:14:16.100Z"
             }
         ],
         "accounts": [
@@ -72,12 +56,12 @@
         "phone": "333",
         "cards": [
             {
-                "id": "123",
-                "number": "000000000000",
+                "id": "1019 1820",
+                "number": "1024 1178 2021 2106",
                 "until": "01-01-2020",
                 "balance": "0.00",
                 "type": "Classic",
-                "registered": "2019-11-28T20:04:13.489Z"
+                "registered": "2019-11-29T07:24:06.996Z"
             }
         ]
     }

@@ -87,29 +87,22 @@ router.post('/', m.checkFieldsUser, async (req, res) => {
 }) */
 
 router.patch('/:id', async (req, res) => {
+    // console.log(req.body)
     await data.find( (user) => {
         if (user.id === req.params.id) {
+            let obj = {
+                id: helper.randomNum(1000, 1100) + ' ' + helper.randomNum(1100, 2000),
+                number: helper.randomNum(1000, 1100) + ' ' + helper.randomNum(1100, 2000) + ' ' + helper.randomNum(2000, 2100) + ' ' + helper.randomNum(2100, 2200),
+                until: "01-01-2020",
+                balance: "0.00",
+                type: req.body.name,
+                registered: helper.newDate()
+            }
             if (user.cards === undefined) {
                 user.cards = []
-                let obj = {
-                    id: "123",
-                    number: "000000000000",
-                    until: "01-01-2020",
-                    balance: "0.00",
-                    type: req.body.name,
-                    registered: helper.newDate()
-                }
                 user.cards.push(obj)
             }
             else {
-                let obj = {
-                    id: "123",
-                    number: "000000000000",
-                    until: "01-01-2020",
-                    balance: "0.00",
-                    type: req.body.name,
-                    registered: helper.newDate()
-                }
                 user.cards.push(obj)
             }
         }

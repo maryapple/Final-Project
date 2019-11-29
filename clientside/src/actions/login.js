@@ -2,7 +2,7 @@ const LOGIN_USER = 'LOGIN_USER'
 const LOGIN_ERROR = 'LOGIN_ERROR'
 
 export const loginUser = user => {
-    console.log('USER action', user)
+    // console.log('USER action', user)
     // const token = localStorage.token
     return dispatch => {
         return fetch("/api/auth/login", {

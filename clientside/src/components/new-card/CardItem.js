@@ -4,14 +4,14 @@ import { connect } from 'react-redux'
 import addCard from '../../actions/add-card'
 
 const CardItem = (props) => {
-    const {name, type, cashback, cost, system, image} = props
+    const {name, type, cashback, cost, system, image, addCard} = props
 
     const handleClick = () => {
-        console.log(props.user.id)
+        // console.log(props.user.id)
         const obj = {
             "name": name
         }
-        console.log(obj)
+        // console.log(obj)
         addCard(props.user.id, obj)
     }
 
