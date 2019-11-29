@@ -28,11 +28,6 @@ const Nav = (props) => {
                             <i className="fas fa-user fa-3x"></i>
                         </Link>
                     </li>
-                    {/* <li>
-                        <Link to="/settings">
-                            <i className="fas fa-cog fa-3x"></i>
-                        </Link>
-                    </li> */}
                     <li>
                         <Link to="/login" onClick={logoutUser}>
                             <i className="fas fa-sign-out-alt fa-3x"></i>

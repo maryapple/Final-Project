@@ -1,19 +1,13 @@
 import React from 'react'
-// import { render } from 'react-dom'
 import Styles from './Styles'
 import { Form, Field } from 'react-final-form'
 import { registerUser } from '../../actions/register'
 import { connect } from 'react-redux'
 import { Redirect } from 'react-router-dom'
 
-// const sleep = ms => new Promise(resolve => setTimeout(resolve, ms))
-
 class Register extends React.Component {
     onSubmit = values => {
-        // await sleep(300)
-        // console.log(values)
         this.props.registerUser(values)
-        console.log("register props", this.props)
     }
     render () {
         return (this.props.registered && localStorage.token === undefined) ? <Redirect to="/login" /> : (

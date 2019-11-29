@@ -12,7 +12,6 @@ const getUserData = (currentId) => {
 
         axios.get(`/api/users/${currentId}`)
             .then(res => {
-                // console.log(res)
                 dispatch({
                     type: GET_DATA_SUCCESS,
                     payload: res.data

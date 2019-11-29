@@ -12,7 +12,6 @@ const getCardType = () => {
 
         axios.get(`/api/card-types`)
             .then(res => {
-                // console.log("------------card types api, res:", res.data)
                 dispatch({
                     type: GET_CARDTYPE_SUCCESS,
                     payload: res.data

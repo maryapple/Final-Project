@@ -3,9 +3,7 @@ import { connect } from 'react-redux'
 import './Profile.css'
 
 const Profile = (props) => {
-    console.log(props)
     const {name, phone, registered, email} = props.currentUser
-    console.log(typeof registered)
     return (
         <div className="profile-container">
             <h1>Личная информация</h1>
