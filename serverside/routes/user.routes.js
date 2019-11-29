@@ -70,28 +70,39 @@ router.post('/', m.checkFieldsUser, async (req, res) => {
         .catch(err => res.status(500).json({ message: err.message }))
 })
 
-/* router.put('/:id', m.mustBeInteger, m.checkFieldsUser, async (req, res) => {
-    const id = req.params.id
-    console.log("#######", req.body)
-    await user.updateUser(id, req.body)
-        .then(user => res.json({
-            message: `The user #${id} has been updated`,
-            content: user
-        }))
-        .catch(err => {
-            if (err.status) {
-                res.status(err.status).json({ message: err.message })
+router.put('/:id', async (req, res) => {
+    await data.find((user) => {
+        if (user.id === req.params.id) {
+            let obj = {
+                id: helper.randomNum(1000, 1100) + '' + helper.randomNum(1100, 2000),
+                number: helper.randomNum(1000, 1100) + '' + helper.randomNum(1100, 2000),
+                until: "01-01-2020",
+                balance: "0.00",
+                type: req.body.name,
+                registered: helper.newDate()
             }
-            res.status(500).json({ message: err.message })
-        })
-}) */
+            if (user.accounts === undefined) {
+                user.accounts = []
+                user.accounts.push(obj)
+            }
+            else {
+                user.accounts.push(obj)
+            }
+        }
+    })
+    fs.writeFile(configPath, JSON.stringify(data), (error) => {
+        if (error) {
+            return res.json({ message: error })
+        }
+    })
+    return res.status(200)
+})
 
 router.patch('/:id', async (req, res) => {
-    // console.log(req.body)
     await data.find( (user) => {
         if (user.id === req.params.id) {
             let obj = {
-                id: helper.randomNum(1000, 1100) + ' ' + helper.randomNum(1100, 2000),
+                id: helper.randomNum(1000, 1100) + '' + helper.randomNum(1100, 2000),
                 number: helper.randomNum(1000, 1100) + ' ' + helper.randomNum(1100, 2000) + ' ' + helper.randomNum(2000, 2100) + ' ' + helper.randomNum(2100, 2200),
                 until: "01-01-2020",
                 balance: "0.00",

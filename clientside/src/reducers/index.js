@@ -7,6 +7,7 @@ import { updateInputReducer } from './update-input'
 import { loginReducer} from './login'
 import { cardTypeReducer } from './getcardtypes'
 import { addCardReducer } from './add-card'
+import { accountTypeReducer } from './getaccounttypes'
 
 export default combineReducers({
     userInfo: userInfoReducer,
@@ -16,5 +17,6 @@ export default combineReducers({
     updateInput: updateInputReducer,
     login: loginReducer,
     cardTypes: cardTypeReducer,
-    addCard: addCardReducer
+    addCard: addCardReducer,
+    accountTypes: accountTypeReducer
 })

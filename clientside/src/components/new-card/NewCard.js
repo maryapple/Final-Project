@@ -8,12 +8,7 @@ class NewCard extends React.Component {
 
     componentDidMount () {
         this.props.getCards()
-        // console.log("----card types props", this.props)
     }
-
-/*     handleClick = (e) => {
-        console.log(e.type)
-    } */
 
     renderCards = () => {
         const { cards } = this.props
@@ -26,7 +21,6 @@ class NewCard extends React.Component {
                 cost={elem.cost}
                 system={elem.system}
                 key={elem.id}
-                // onClick={this.handleClick}
             />
         })
 

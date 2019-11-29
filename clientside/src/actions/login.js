@@ -2,8 +2,6 @@ const LOGIN_USER = 'LOGIN_USER'
 const LOGIN_ERROR = 'LOGIN_ERROR'
 
 export const loginUser = user => {
-    // console.log('USER action', user)
-    // const token = localStorage.token
     return dispatch => {
         return fetch("/api/auth/login", {
             method: "POST",
@@ -20,10 +18,8 @@ export const loginUser = user => {
                         type: LOGIN_ERROR,
                         payload: data.user
                     })
-                    console.log('----action ERROR------', data)
                 } 
                 else {
-                    console.log('-------------action data--------------', data)
                     localStorage.setItem("token", data.token)
                     dispatch({
                         type: LOGIN_USER,
@@ -37,7 +33,6 @@ export const loginUser = user => {
 export const getProfileFetch = () => {
     return dispatch => {
         const token = localStorage.token;
-        console.log("token", token)
         if (token) {
             return fetch("/api/profile/", {
                 method: "GET",
@@ -53,7 +48,6 @@ export const getProfileFetch = () => {
                         localStorage.removeItem("token")
                     } 
                     else {
-                        console.log("data", data)
                         dispatch({
                             type: LOGIN_USER,
                             payload: data

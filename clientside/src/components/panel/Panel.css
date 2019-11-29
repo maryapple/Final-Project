@@ -20,7 +20,7 @@
     width: 100%;
 }
 
-.btn {
+.panel-container .btn {
     border-radius: 0;
     font-size: 2rem !important;
     width: 31%;

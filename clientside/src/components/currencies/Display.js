@@ -3,15 +3,20 @@ import { connect } from 'react-redux'
 
 class Display extends Component {
     renderDisplay = () => {
-        // console.log(this.props)
         let {curr} = this.props
         const { USD, EUR } = this.props.currencies
-        const {txt} = this.props.myinput 
+        let {txt} = this.props.myinput 
+        
+        
         curr === 'EUR' ? curr = EUR : curr = USD
+        if (this.props.myinput === {}) {
+            txt = 0
+        }
+        console.log(this.props)
         return (
-            <h4>
+            <div>
                 {txt * curr}
-            </h4>
+            </div>
         )
     }
 

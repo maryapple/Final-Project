@@ -1,5 +1,4 @@
 import React from 'react'
-// import { render } from 'react-dom'
 import Styles from './Styles'
 import { Form, Field } from 'react-final-form'
 import { loginUser } from '../../actions/login'
@@ -9,12 +8,6 @@ import { Redirect, Link } from 'react-router-dom'
 class LoginForm extends React.Component {
     onSubmit = values => {
         this.props.loginUser(values)
-        console.log("---------PROPS", this.props)
-        /* if ((!this.props.error) && (localStorage.getItem('token'))) {
-            console.log(this.props.error)
-            return (<Redirect to="/" />)
-        }
-        console.log(localStorage.token) */
     }
 
     render() {

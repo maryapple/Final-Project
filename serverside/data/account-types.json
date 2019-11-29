@@ -1,0 +1,20 @@
+[
+    {
+        "id": "1",
+        "name": "Основной счет",
+        "image": "https://images.aif.ru/003/190/83bafcb97e107eef9aa96ef15e5a619d.jpg",
+        "currency": "Рубли"
+    },
+    {
+        "id": "2",
+        "name": "Депозитный счет",
+        "image": "https://md-eksperiment.org/images/posts/cef3d5eb-0a69-46ca-8292-ec9bf047532c.jpeg",
+        "currency": "Рубли"
+    },
+    {
+        "id": "3",
+        "name": "Расчетный счет",
+        "image": "https://cdn23.img.ria.ru/images/155926/73/1559267360_0:316:3077:2047_600x0_80_0_0_b971b83ba63dae00baa50d7b82115f88.jpg",
+        "currency": "Евро"
+    }
+]

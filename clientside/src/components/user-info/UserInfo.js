@@ -6,14 +6,6 @@ import Card from './Card'
 import Account from './Account'
 
 class UserInfo extends React.Component {
-    componentDidMount() {
-        console.log(this.props)
-/*         if (this.props.currentUser !== {}) {
-            this.props.setUserData(this.props.currentUser.id)
-        } */
-        
-    }
-
     componentDidUpdate (prev) {
         if (prev.currentUser !== this.props.currentUser) {
             this.props.setUserData(this.props.currentUser.id)
@@ -88,35 +80,15 @@ class UserInfo extends React.Component {
                 </div>
             )
         }
-            
-        /* const accountItems = accounts.map(elem => {
-            return <Account
-                number={elem.number}
-                key={elem.id}
-            />
-        })
-
-        const cardItems = cards.map(elem => {
-            return <Card
-                number={elem.number}
-                key={elem.id}
-            />
-        })
-        
-        return (
-            <div className="user-info-container">
-                <h1>{name.title + " " + name.first + " " + name.last}</h1>
-                <h4>Ваши счета:</h4>
-                {accountItems}
-                <h4>Ваши карты:</h4>
-                {cardItems}
-            </div>
-        ) */
     }
 
     render() {
         if (this.props.loading) {
-            return (<div>загрузка</div>)
+            return (
+                <div className="user-info-container">
+                    <div>загрузка</div>
+                </div>
+            )
         }
         return this.renderUser()
     }

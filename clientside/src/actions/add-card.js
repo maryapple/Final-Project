@@ -12,7 +12,6 @@ const addCard = (currentId, card) => {
 
         axios.patch(`/api/users/${currentId}`, card)
             .then(data => {
-                console.log("ADD CARD", card)
                 dispatch({
                     type: ADD_DATA_CARD_SUCCESS,
                     payload: data.card
@@ -24,28 +23,6 @@ const addCard = (currentId, card) => {
                     payload: error
                 })
             })
-        /* return fetch(`/api/users/${currentId}`, {
-            method: 'PATCH',
-            headers: {
-                'Content-Type': 'application/json',
-                Accept: 'application/json',
-            },
-            body: JSON.stringify({ card })
-        })
-            .then(resp => resp.json())
-            .then(data => {
-                console.log('here')
-                if (data.message) {
-                    console.log(data, 'ОШИБКА')
-                }
-                else {
-                    console.log('все ок, data:', data)
-                    dispatch({
-                        type: ADD_DATA_CARD_SUCCESS,
-                        payload: data.card
-                    })
-                }
-            }) */
     }
 }
 

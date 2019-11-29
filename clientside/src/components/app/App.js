@@ -10,13 +10,13 @@ import {connect} from 'react-redux'
 import {getProfileFetch, logoutUser} from '../../actions/login'
 import ProfilePage from '../../pages/profile'
 import NewCardPage from '../../pages/new-card'
+import NewAccountPage from '../../pages/new-account'
 
 class App extends Component {
 	componentDidMount() {
 		this.props.getProfileFetch()
 	}
 	render() {
-		// console.log("currentUser", currentUser)
 		return (
 			<BrowserRouter>
 				<Switch>
@@ -48,6 +48,10 @@ class App extends Component {
 					<Route
 						path="/new-card"
 						component={NewCardPage}
+					/>
+					<Route
+						path="/new-account"
+						component={NewAccountPage}
 					/>
 				</Switch>
 				

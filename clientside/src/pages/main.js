@@ -8,7 +8,6 @@ import { getProfileFetch } from '../actions/login'
 
 class MainPage extends React.Component {
     componentDidMount () {
-        console.log("main", this.props)
         this.props.getProfileFetch()
     }
     
@@ -26,7 +25,6 @@ class MainPage extends React.Component {
             </div>
         )
     }
-    
 }
 
 const mapStateToProps = state => {

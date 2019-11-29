@@ -2,7 +2,6 @@ const fs = require('fs')
 
 // check if a row (person in array) exists via the id (GET one, UPDATE, DELETE)
 function mustBeInArray(array, id) {
-    // console.log('checks-for-models.js')
     return new Promise((resolve, reject) => {
         const row = array.find(r => r.id === id)
         if (!row) {
@@ -59,7 +58,7 @@ function generateEmail(array) {
 function writeJSONFile(filename, content) {
     fs.writeFileSync(filename, JSON.stringify(content), 'utf8', (err) => {
         if (err) {
-            console.log(err)
+            return status(400).json({ message: 'Не удалась запись в файл'})
         }
     })
 }

@@ -13,7 +13,6 @@ export const addCardReducer = (state = initialStateCard, action) => {
             return { ...state, isLoading: true }
 
         case ADD_DATA_CARD_SUCCESS:
-            console.log('here')
             return { ...state, isLoading: false, card: action.payload }
 
         case ADD_DATA_CARD_FAIL:
