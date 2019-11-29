@@ -9,10 +9,11 @@ class Display extends Component {
         
         
         curr === 'EUR' ? curr = EUR : curr = USD
-        if (this.props.myinput === {}) {
+        if (this.props.myinput === undefined) {
             txt = 0
         }
-        console.log(this.props)
+
+        console.log({txt}, this.props.myinput)
         return (
             <div>
                 {txt * curr}

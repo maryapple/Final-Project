@@ -1,6 +1,5 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import './NewAccount.css'
 import getAccountType from '../../actions/get-account-type'
 import AccountItem from './AccountItem'
 
@@ -16,7 +15,7 @@ class NewAccount extends React.Component {
             return <AccountItem
                 image={elem.image}
                 name={elem.name}
-                type={elem.type}
+                currency={elem.currency}
                 key={elem.id}
             />
         })

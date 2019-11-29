@@ -1,24 +1,26 @@
 import React from 'react'
-import "./NewAccount.css"
 import { connect } from 'react-redux'
-// import addCard from '../../actions/add-card'
+import addAccount from '../../actions/add-account'
+import "../new-card/NewCard.css"
 
 const AccountItem = (props) => {
-    const { name, type, cashback, cost, system, image, addCard } = props
+    const { name, image, currency, addAccount } = props
 
-/*     const handleClick = () => {
+    const handleClick = () => {
         const obj = {
             "name": name
         }
-        addCard(props.user.id, obj)
-    } */
+        addAccount(props.user.id, obj)
+    }
 
     return (
         <div className="card-element" >
-            <img src={image} width="200" />
-            <div>Название: {name}</div>
-            <div>Тип: {type}</div>
-            {/* <button type="button" className="btn btn-primary" onClick={handleClick}>Заказать</button> */}
+            <img src={image} alt="card" height="150" />
+            <div className="card-text">
+                <div>Название: {name}</div>
+                <div>Валюта счета: {currency}</div>
+            </div>
+            <button type="button" className="btn btn-primary" onClick={handleClick}>Открыть</button>
         </div>
     )
 }
@@ -30,10 +32,10 @@ const mapStateToProps = (store) => {
     }
 }
 
-/* const mapDispatchToProps = (dispatch) => {
+const mapDispatchToProps = (dispatch) => {
     return {
-        addCard: (userId, obj) => dispatch(addCard(userId, obj))
+        addAccount: (userId, obj) => dispatch(addAccount(userId, obj))
     }
-} */
+}
 
-export default connect(mapStateToProps)(AccountItem)
+export default connect(mapStateToProps, mapDispatchToProps)(AccountItem)
