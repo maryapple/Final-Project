@@ -34,26 +34,3 @@ router.get('/:id', m.mustBeInteger, async (req, res) => {
             }
         })
 })
-
-/* router.delete('/:id', m.mustBeInteger, async (req, res) => {
-    const id = req.params.id
-    await card.deleteCard(id)
-        .then(card => res.json({
-            message: `The card #${id} has been deleted`
-        }))
-        .catch(err => {
-            if (err.status) {
-                res.status(err.status).json({ message: err.message })
-            }
-            res.status(500).json({ message: err.message })
-        })
-}) */
-
-/* router.post('/', async (req, res) => {
-    await card.createCard(req.body)
-        .then(card => res.status(201).json({
-            message: `The card #${card.id} has been created`,
-            content: card
-        }))
-        .catch(err => res.status(500).json({ message: err.message }))
-}) */

@@ -4,10 +4,6 @@ const path = require('path')
 const morgan = require('morgan')
 app.use(morgan('tiny'))
 
-/* app.get('/', (req, res) => {
-    res.json({ message: 'Hello world' })
-}) */
-
 if (process.env.NODE_ENV === 'production') {
     app.use(express.static('client/build'));
 }
