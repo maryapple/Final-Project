@@ -26,3 +26,19 @@
     opacity: 0.8;
     background: grey;
 }
+
+@media (max-width: 1180px) {
+    .new-card-container {
+        width: 80%;
+        margin: 1rem auto;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 890px) {
+    .new-card-container {
+        width: 80%;
+        margin: 1rem auto;
+        font-size: .7rem;
+    }
+}

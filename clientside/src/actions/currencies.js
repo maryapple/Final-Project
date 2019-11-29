@@ -12,7 +12,6 @@ const getExchangeRate = () => {
 
         axios.get(`https://api.exchangerate-api.com/v4/latest/RUB`)
             .then(res => {
-                // console.log('res from action', res.data.rates)
                 dispatch({
                     type: GET_DATA_CURRENCIES_SUCCESS,
                     payload: res.data.rates

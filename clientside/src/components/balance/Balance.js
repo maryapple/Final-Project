@@ -10,19 +10,20 @@ class Balance extends React.Component {
         if (this.props.users.accounts && this.props.users.cards) {
             const accountItems = this.props.users.accounts.map(elem => {
                 totalBalanceAccount += parseInt(elem.balance)
-                return (<div className="account-details-div">
+                return (<div className="account-details-div" key={elem.id}>
                     <div className="account-details-number">Счет №{elem.number}</div>
+                    <div className="staff-type">{elem.type}</div>
                     <div>Действителен до {elem.until}</div>
-                    <div>Баланс {elem.balance}</div>
+                    <div>Баланс {elem.balance} рублей</div>
                 </div>)
             })
-
             const cardItems = this.props.users.cards.map(elem => {
                 totalBalanceAccount += parseInt(elem.balance)
-                return (<div className="account-details-div">
+                return (<div className="account-details-div" key={elem.id}>
                     <div className="account-details-number">Карта №{elem.number}</div>
+                    <div className="staff-type">{elem.type}</div>
                     <div>Действителен до {elem.until}</div>
-                    <div>Баланс {elem.balance}</div>
+                    <div>Баланс {elem.balance} рублей</div>
                 </div>)
             })
 
@@ -34,7 +35,7 @@ class Balance extends React.Component {
                     <div className="balance-header">
                         Общий баланс
                 </div>
-                    <div>{totalBalanceAccount.toFixed(2)}</div>
+                    <div>{totalBalanceAccount.toFixed(2)} рублей</div>
                 </div>
             )
         }
@@ -42,10 +43,10 @@ class Balance extends React.Component {
         else if (!this.props.users.accounts && this.props.users.cards) {
             const cardItems = this.props.users.cards.map(elem => {
                 totalBalanceAccount += parseInt(elem.balance)
-                return (<div className="account-details-div">
+                return (<div className="account-details-div" key={elem.id}>
                     <div className="account-details-number">Карта №{elem.number}</div>
                     <div>Действителен до {elem.until}</div>
-                    <div>Баланс {elem.balance}</div>
+                    <div>Баланс {elem.balance} рублей</div>
                 </div>)
             })
 
@@ -56,7 +57,7 @@ class Balance extends React.Component {
                     <div className="balance-header">
                         Общий баланс
                 </div>
-                    <div>{totalBalanceAccount.toFixed(2)}</div>
+                    <div>{totalBalanceAccount.toFixed(2)} рублей</div>
                 </div>
             )
         }
@@ -64,10 +65,10 @@ class Balance extends React.Component {
         else if (this.props.users.accounts && !this.props.users.cards) {
             const accountItems = this.props.users.accounts.map(elem => {
                 totalBalanceAccount += parseInt(elem.balance)
-                return (<div className="account-details-div">
+                return (<div className="account-details-div" key={elem.id}>
                     <div className="account-details-number">Счет №{elem.number}</div>
                     <div>Действителен до {elem.until}</div>
-                    <div>Баланс {elem.balance}</div>
+                    <div>Баланс {elem.balance} рублей</div>
                 </div>)
             })
 
@@ -78,7 +79,7 @@ class Balance extends React.Component {
                     <div className="balance-header">
                         Общий баланс
                     </div>
-                    <div>{totalBalanceAccount.toFixed(2)}</div>
+                    <div>{totalBalanceAccount.toFixed(2)} рублей</div>
                 </div>
             )
         }
@@ -93,36 +94,6 @@ class Balance extends React.Component {
                 </div>
             )
         }
-
-        /* const accountItems = this.props.users.accounts.map(elem => {
-            totalBalanceAccount += parseInt(elem.balance)
-            return (<div className="account-details-div">
-                        <div className="account-details-number">Счет №{elem.number}</div>
-                        <div>Действителен до {elem.until}</div>
-                        <div>Баланс {elem.balance}</div>
-                    </div>)
-        })
-
-        const cardItems = this.props.users.cards.map(elem => {
-            totalBalanceAccount += parseInt(elem.balance)
-            return (<div className="account-details-div">
-                <div className="account-details-number">Карта №{elem.number}</div>
-                <div>Действителен до {elem.until}</div>
-                <div>Баланс {elem.balance}</div>
-            </div>)
-        }) */
-
-        /* return (
-            <div className="balance-container">
-                <p>Баланс счетов и карт</p>
-                {accountItems}
-                {cardItems}
-                <div className="balance-header">
-                    Общий баланс
-                </div>
-                <div>{totalBalanceAccount.toFixed(2)}</div>
-            </div>
-        ) */
     }
 
     render() {

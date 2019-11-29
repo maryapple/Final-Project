@@ -15,7 +15,7 @@ const AccountItem = (props) => {
 
     return (
         <div className="card-element" >
-            <img src={image} alt="card" height="150" />
+            <img src={image} alt="card" width="150" />
             <div className="card-text">
                 <div>Название: {name}</div>
                 <div>Валюта счета: {currency}</div>

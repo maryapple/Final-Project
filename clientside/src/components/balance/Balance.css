@@ -4,8 +4,6 @@
     margin: 1.5rem auto;
     height: 30%;
     flex-direction: column;
-    /* flex-wrap: wrap;
-    justify-content: center; */
 }
 
 .balance-container p {
@@ -24,4 +22,8 @@
 
 .account-details-div{
     margin-bottom: 1rem;
+}
+
+.staff-type {
+    font-weight: bold;
 }

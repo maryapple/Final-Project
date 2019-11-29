@@ -2,7 +2,7 @@
     width: 80%;
     display: flex;
     margin: 1.5rem auto;
-    height: 20vh;
+    height: 16vh;
     flex-wrap: wrap;
     justify-content: center;
 }
@@ -10,7 +10,7 @@
 .panel-container a {
     border-radius: 0;
     font-size: 2rem !important;
-    width: 20%;
+    width: 22%;
     margin: 1.1%;
     height: 6rem;
     vertical-align: middle;
@@ -22,9 +22,7 @@
 
 .panel-container .btn {
     border-radius: 0;
-    font-size: 2rem !important;
-    width: 31%;
-    margin: 1.1%;
+    font-size: 1.6rem !important;
     height: 6rem;
     vertical-align: middle;
 }
