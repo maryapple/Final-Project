@@ -25,6 +25,11 @@ const Panel = () => {
                     Новый счет
                 </button>
             </Link>
+            <Link to="/mortgage-calculator">
+                <button type="button" className="btn btn-secondary">
+                    Калькулятор ипотеки
+                </button>
+            </Link>
         </div>
     )
 }

@@ -11,10 +11,11 @@ import {getProfileFetch, logoutUser} from '../../actions/login'
 import ProfilePage from '../../pages/profile'
 import NewCardPage from '../../pages/new-card'
 import NewAccountPage from '../../pages/new-account'
+import {MortgageCalculatorPage} from "../../pages/MortgageCalculator";
 
 class App extends Component {
 	componentDidMount() {
-		this.props.getProfileFetch()
+        this.props.getProfileFetch()
 	}
 	render() {
 		return (
@@ -52,6 +53,11 @@ class App extends Component {
 					<Route
 						path="/new-account"
 						component={NewAccountPage}
+					/>
+
+					<Route
+						path="/mortgage-calculator"
+						component={MortgageCalculatorPage}
 					/>
 				</Switch>
 				

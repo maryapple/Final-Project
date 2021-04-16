@@ -1,16 +1,13 @@
 .panel-container {
-    width: 80%;
     display: flex;
     margin: 1.5rem auto;
-    height: 16vh;
     flex-wrap: wrap;
     justify-content: center;
 }
 
 .panel-container a {
     border-radius: 0;
-    font-size: 2rem !important;
-    width: 22%;
+    width: 14%;
     margin: 1.1%;
     height: 6rem;
     vertical-align: middle;
@@ -22,7 +19,7 @@
 
 .panel-container .btn {
     border-radius: 0;
-    font-size: 1.6rem !important;
+    font-size: 1.2rem;
     height: 6rem;
     vertical-align: middle;
 }
